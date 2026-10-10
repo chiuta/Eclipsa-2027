@@ -1217,7 +1217,7 @@ DATA.partial.forEach(([name,country,lat,lon,pct,time])=>{
 // ---- Totality-path cities ----
 const diamondIcon = L.divIcon({className:'', html:'<div style="width:11px;height:11px;background:#e8c468;border:2px solid #0f0a1c;border-radius:2px;transform:rotate(45deg);box-shadow:0 0 9px rgba(232,196,104,0.75);"></div>', iconSize:[15,15], iconAnchor:[7,7], popupAnchor:[0,-6]});
 DATA.totality.forEach(([name,country,lat,lon,durat,note])=>{
-  L.marker([lat,lon], {icon:diamondIcon}).addTo(map).bindPopup(
+  L.marker([lat,lon], {icon:diamondIcon, alt:name+' — totalitate', title:name}).addTo(map).bindPopup(
     `<div class="pop-city">${name}</div><div class="pop-country">${country}</div>`+
     `<div class="pop-durat">${durat}</div><div class="pop-label">totalitate${note?' &middot; '+note:''}</div>`
   );
@@ -1226,7 +1226,7 @@ DATA.totality.forEach(([name,country,lat,lon,durat,note])=>{
 // ---- Edge-of-band cities ----
 const edgeIcon = L.divIcon({className:'', html:'<div style="width:14px;height:14px;border-radius:50%;border:2px dashed #d9a44e;"></div>', iconSize:[14,14], iconAnchor:[7,7], popupAnchor:[0,-6]});
 DATA.edge.forEach(([name,country,lat,lon,note])=>{
-  L.marker([lat,lon], {icon:edgeIcon}).addTo(map).bindPopup(
+  L.marker([lat,lon], {icon:edgeIcon, alt:name+' — marginea benzii', title:name}).addTo(map).bindPopup(
     `<div class="pop-city">${name}</div><div class="pop-country">${country}</div>`+
     `<div class="pop-label pop-edge">${note}</div>`
   );
@@ -1241,7 +1241,7 @@ const gdIcon = L.divIcon({
           <div style="position:absolute;top:8px;left:8px;width:10px;height:10px;border-radius:50%;background:#f7e3a1;box-shadow:0 0 12px 3px rgba(247,227,161,0.85);"></div>
         </div>`
 });
-L.marker([gdLat,gdLon], {icon:gdIcon}).addTo(map).bindPopup(
+L.marker([gdLat,gdLon], {icon:gdIcon, alt:gdName+' — durata maximă', title:gdName}).addTo(map).bindPopup(
   `<div class="pop-city">${gdName}</div><div class="pop-country">${gdLoc}</div>`+
   `<div class="pop-durat">${gdDurat}</div><div class="pop-label">${gdNote}</div>`
 );

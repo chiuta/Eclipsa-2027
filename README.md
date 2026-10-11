@@ -41,6 +41,13 @@ O hartă offline a eclipsei din 2 august 2027 (maxim 6m 23s, Saros 136). Banda �
 
 Descarcă `index.html` și deschide-l în browser; funcționează fără internet.
 
+## Istoric / Changelog
+
+Ultima actualizare: 11 octombrie 2026.
+
+- Hartă, antet și legendă sunt acum repere semantice (`main`, `header`, `aside`); axe-core: 0 violări la 1280 și 360 px (și varianta statică are conținutul în `main`).
+- Evenimentul (2 august 2027) este încă viitor la această dată; datele NASA/GSFC nu au fost modificate.
+
 ## Licență
 
 Licența nu este încă declarată. Include Leaflet 1.9.4 (BSD-2-Clause, © Vladimir Agafonkin) și date Natural Earth (domeniu public).

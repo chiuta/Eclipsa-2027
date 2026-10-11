@@ -849,6 +849,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     </div>
   </header>
 
+  <main>
   <div class="safety" role="note"><b>Siguranța ochilor — citește înainte de a privi eclipsa.</b>
     <ul>
       <li>Nu privi direct Soarele fără protecție, nici cu ochii liberi, nici „doar puțin”: lumina lui poate lăsa leziuni ale retinei, fără durere și uneori definitive.</li>
@@ -1068,11 +1069,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
   <p class="enhance-note">Deschisă direct în Safari sau Chrome, această hartă devine complet interactivă (zoom, pan, atingere pe orașe). În previzualizări din aplicații (WhatsApp, mesagerie), varianta de mai sus e cea garantată să funcționeze.</p>
 
   <div class="sources">Traseu calculat din elementele Besselian oficiale NASA/GSFC (F.&nbsp;Espenak). Procentele orașelor: NASA/GSFC via nationaleclipse.com. Verificat cu ESA, Wikipedia, eclipsewise.com și moonblink.info. Verificare independentă (2026): recalculare din elementele Besselian NASA (ΔT&nbsp;=&nbsp;71,7&nbsp;s) — acoperirea parțială a celor 59 de orașe diferă în medie cu 0,05 puncte procentuale (max. 0,3); orele de maxim sunt trunchiate la minut; au fost corectate Delhi, Aswan și Abu Simbel. Duratele de totalitate pe orașe sunt valori aproximative, pentru centrul orașului (variază cu zeci de secunde după locul exact). Aplicație personală, neoficială. Conturul hărții (coaste și granițe): Natural&nbsp;Earth.</div>
+</main>
 </div>
 
 <div id="interactiveView" style="display:none">
-<div id="map" role="region" aria-label="Hartă interactivă a traseului eclipsei totale din 2 august 2027"></div>
-<div class="top-bar">
+<main id="map" aria-label="Hartă interactivă a traseului eclipsei totale din 2 august 2027"></main>
+<header class="top-bar">
   <div class="header">
     <div class="header-text">
       <p class="eyebrow">Traseul umbrei lunare</p>
@@ -1087,9 +1089,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <button data-view="luxor">Luxor, Egipt</button>
     <button data-view="romania">România</button>
   </div>
-</div>
+</header>
 
-<div class="legend" id="legend">
+<aside class="legend" id="legend" aria-label="Legendă și date">
   <div class="legend-handle" id="legendHandle" role="button" tabindex="0" aria-expanded="false" aria-controls="legendBody">
     <div class="legend-bar"></div>
     <div class="legend-label">Legendă &amp; date <b>·</b> atinge pentru detalii</div>
@@ -1130,7 +1132,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
     <div class="sources">Traseu calculat din elementele Besselian oficiale NASA/GSFC (F.&nbsp;Espenak). Procentele orașelor: NASA/GSFC via nationaleclipse.com. Verificat cu ESA, Wikipedia, eclipsewise.com și moonblink.info. Verificare independentă (2026): recalculare din elementele Besselian NASA (ΔT&nbsp;=&nbsp;71,7&nbsp;s) — acoperirea parțială a celor 59 de orașe diferă în medie cu 0,05 puncte procentuale (max. 0,3); orele de maxim sunt trunchiate la minut; au fost corectate Delhi, Aswan și Abu Simbel. Duratele de totalitate pe orașe sunt valori aproximative, pentru centrul orașului (variază cu zeci de secunde după locul exact). Aplicație personală, neoficială. Conturul hărții (coaste și granițe): Natural&nbsp;Earth, desenat direct din date vectoriale — fără server de tile-uri; fișierul nu contactează nicio rețea.</div>
   </div>
-</div>
+</aside>
 </div>
 
 <script>

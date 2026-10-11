@@ -15,13 +15,14 @@ O hartă offline a eclipsei din 2 august 2027 (maxim 6m 23s, Saros 136). Banda �
 - Hartă Leaflet cu bandă de totalitate, linie centrală, punctul de durată maximă (26°49′N 31°08′E).
 - 59 de orașe cu procent de acoperire parțială și ora maximului (fus local); 10 locuri pe/lângă traseu cu durata totalității (aproximativă).
 - Butoane de salt (Europa, traseu complet, Cádiz–Gibraltar, Luxor, România), legendă pliabilă.
+- „Caută un loc”: scrii numele unui loc din listă (fără diacritice) sau coordonate zecimale `lat, lon`; pentru coordonate aplicația spune, local, dacă punctul e în interiorul benzii de totalitate și la câți km este de linia centrală / de cea mai apropiată margine (față de poligonul benzii; orientativ, nu calculează durata totalității).
 - Avertisment permanent de siguranță a ochilor (ISO 12312-2).
 
 ## Manual de utilizare
 
 1. Deschide pagina; trage/zoom pe hartă.
 2. Atinge un oraș pentru procent și oră, sau un romb auriu pentru durata totalității.
-3. Folosește butoanele de sus pentru zone predefinite.
+3. Folosește butoanele de sus pentru zone predefinite sau „Caută un loc” pentru un oraș din listă ori pentru coordonate.
 4. Deschide „Legendă & date” (jos) pentru legendă, fapte, siguranță și surse.
 
 ## Confidențialitate și rețea
@@ -45,6 +46,7 @@ Descarcă `index.html` și deschide-l în browser; funcționează fără interne
 
 Ultima actualizare: 11 octombrie 2026.
 
+- Adăugat „Caută un loc” (oraș din listă sau coordonate → în/în afara benzii și distanțe orientative); CSP: `script-src` pe hash SHA-256, fără `'unsafe-inline'`; captură de ecran actualizată (butonul nou).
 - Hartă, antet și legendă sunt acum repere semantice (`main`, `header`, `aside`); axe-core: 0 violări la 1280 și 360 px (și varianta statică are conținutul în `main`).
 - Evenimentul (2 august 2027) este încă viitor la această dată; datele NASA/GSFC nu au fost modificate.
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-w7Ca4k1Rn1nHvCQBQc2PUWo8EMz6bwQ6h5Iv/hRrsxE=' 'sha256-CAWakofPIsWfqRRG744bTpFQC8VFp/floNKqAGgDKJ4='; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="description" content="Hartă offline a eclipsei totale de Soare din 2 august 2027: banda de totalitate (Spania, Africa de Nord, Peninsula Arabică), durate și acoperirea parțială pe orașe. Valori informative, calculate din elementele Besselian NASA.">
 <meta property="og:title" content="Eclipsa totală de Soare · 2 august 2027">
 <meta property="og:description" content="Harta benzii de totalitate, durate și procente de acoperire pe orașe. Fără server, fără cont, fără urmărire.">
@@ -779,6 +779,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .safety b{color:#f2a583;}
   .safety ul{margin:6px 0 0;padding-left:18px;}
   .safety li{margin:3px 0;}
+  .lookup{display:flex;gap:8px;flex-wrap:wrap;}
+  .lookup input{flex:1 1 180px;min-width:0;font:400 13px/1.2 var(--font-body);color:var(--text-primary);background:var(--bg-panel);border:1px solid var(--line-strong);border-radius:10px;padding:10px 12px;}
+  .lookup button{flex:none;font:600 12px/1 var(--font-body);color:var(--umbra-deep);background:var(--corona-gold);border:0;border-radius:10px;padding:10px 14px;cursor:pointer;}
+  .lookup-out{margin-top:10px;font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary);}
+  .lookup-out b{color:var(--text-primary);}
+  .lookup-pick{display:block;width:100%;text-align:left;margin:0 0 6px;font:500 12.5px/1.3 var(--font-body);color:var(--text-primary);background:var(--bg-panel);border:1px solid var(--line-subtle);border-radius:8px;padding:9px 11px;cursor:pointer;}
   .sources{margin-top:16px;font:400 11px/1.6 var(--font-body);color:var(--text-tertiary);border-top:1px solid var(--line-subtle);padding-top:12px;}
 
   @media (max-width:560px){:root{--peek:88px;}}
@@ -1088,6 +1094,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <button data-view="spain">Cádiz–Gibraltar</button>
     <button data-view="luxor">Luxor, Egipt</button>
     <button data-view="romania">România</button>
+    <button data-action="lookup">Caută un loc</button>
   </div>
 </header>
 
@@ -1098,6 +1105,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <div class="legend-warn"><b>Atenție:</b> nu privi Soarele fără filtre certificate ISO&nbsp;12312-2 (nici parțial eclipsat).</div>
   </div>
   <div class="legend-body" id="legendBody">
+
+    <div class="lg-section" id="lookupSec">
+      <p class="lg-title">Caută un loc</p>
+      <form class="lookup" id="lookupForm" autocomplete="off">
+        <label for="lookupIn" class="lg-text" style="flex:1 0 100%">Numele unui oraș din listă (ex. Cádiz, Luxor, București) sau coordonate zecimale <b>lat, lon</b> (ex. 36.53, -6.29):</label>
+        <input id="lookupIn" type="text" inputmode="text" spellcheck="false" placeholder="oraș sau lat, lon">
+        <button type="submit">Caută</button>
+      </form>
+      <div class="lookup-out" id="lookupOut" role="status" aria-live="polite"></div>
+    </div>
 
     <div class="lg-section">
       <p class="lg-title">Banda de totalitate</p>
@@ -1204,34 +1221,35 @@ L.polyline(DATA.central, {color:'#f7e3a1', weight:1.4, opacity:0.92})
   .bindPopup('<div class="pop-city">Linia centrală</div><div class="pop-label">Axul benzii de totalitate — durata totalității este maximă în fiecare punct de-a lungul acestei linii.</div>');
 
 // ---- Partial-eclipse cities ----
+const PLACES = [];
 DATA.partial.forEach(([name,country,lat,lon,pct,time])=>{
   const r = 4 + (pct/100)*6.5;
   const col = pctColor(pct);
-  L.circleMarker([lat,lon], {
+  PLACES.push({name,country,lat,lon,mk:L.circleMarker([lat,lon], {
     radius:r, color:'rgba(243,240,230,0.5)', weight:1, fillColor:col, fillOpacity:0.92
   }).addTo(map).bindPopup(
     `<div class="pop-city">${name}</div><div class="pop-country">${country}</div>`+
     `<div class="pop-pct" style="color:${col}">${fmtPct(pct)}%</div>`+
     `<div class="pop-label">din discul solar acoperit &middot; maxim la ${time}</div>`
-  );
+  )});
 });
 
 // ---- Totality-path cities ----
 const diamondIcon = L.divIcon({className:'', html:'<div style="width:11px;height:11px;background:#e8c468;border:2px solid #0f0a1c;border-radius:2px;transform:rotate(45deg);box-shadow:0 0 9px rgba(232,196,104,0.75);"></div>', iconSize:[15,15], iconAnchor:[7,7], popupAnchor:[0,-6]});
 DATA.totality.forEach(([name,country,lat,lon,durat,note])=>{
-  L.marker([lat,lon], {icon:diamondIcon, alt:name+' — totalitate', title:name}).addTo(map).bindPopup(
+  PLACES.push({name,country,lat,lon,mk:L.marker([lat,lon], {icon:diamondIcon, alt:name+' — totalitate', title:name}).addTo(map).bindPopup(
     `<div class="pop-city">${name}</div><div class="pop-country">${country}</div>`+
     `<div class="pop-durat">${durat}</div><div class="pop-label">totalitate${note?' &middot; '+note:''}</div>`
-  );
+  )});
 });
 
 // ---- Edge-of-band cities ----
 const edgeIcon = L.divIcon({className:'', html:'<div style="width:14px;height:14px;border-radius:50%;border:2px dashed #d9a44e;"></div>', iconSize:[14,14], iconAnchor:[7,7], popupAnchor:[0,-6]});
 DATA.edge.forEach(([name,country,lat,lon,note])=>{
-  L.marker([lat,lon], {icon:edgeIcon, alt:name+' — marginea benzii', title:name}).addTo(map).bindPopup(
+  PLACES.push({name,country,lat,lon,mk:L.marker([lat,lon], {icon:edgeIcon, alt:name+' — marginea benzii', title:name}).addTo(map).bindPopup(
     `<div class="pop-city">${name}</div><div class="pop-country">${country}</div>`+
     `<div class="pop-label pop-edge">${note}</div>`
-  );
+  )});
 });
 
 // ---- Greatest-duration point ----
@@ -1243,10 +1261,10 @@ const gdIcon = L.divIcon({
           <div style="position:absolute;top:8px;left:8px;width:10px;height:10px;border-radius:50%;background:#f7e3a1;box-shadow:0 0 12px 3px rgba(247,227,161,0.85);"></div>
         </div>`
 });
-L.marker([gdLat,gdLon], {icon:gdIcon, alt:gdName+' — durata maximă', title:gdName}).addTo(map).bindPopup(
+PLACES.push({name:gdName,country:gdLoc,lat:gdLat,lon:gdLon,mk:L.marker([gdLat,gdLon], {icon:gdIcon, alt:gdName+' — durata maximă', title:gdName}).addTo(map).bindPopup(
   `<div class="pop-city">${gdName}</div><div class="pop-country">${gdLoc}</div>`+
   `<div class="pop-durat">${gdDurat}</div><div class="pop-label">${gdNote}</div>`
-);
+)});
 
 const styleTag = document.createElement('style');
 styleTag.textContent = '@keyframes gdPulse{0%{transform:scale(.5);opacity:.95;}100%{transform:scale(2.1);opacity:0;}}';
@@ -1263,6 +1281,13 @@ const VIEWS = {
 document.getElementById('navRow').addEventListener('click', (e)=>{
   const btn = e.target.closest('button');
   if(!btn) return;
+  if(btn.dataset.action==='lookup'){
+    if(!legend.classList.contains('open')) toggleLegend();
+    const inp=document.getElementById('lookupIn');
+    document.getElementById('lookupSec').scrollIntoView({block:'start'});
+    setTimeout(()=>inp.focus({preventScroll:true}), 60);
+    return;
+  }
   map.flyToBounds(VIEWS[btn.dataset.view], {padding:[24,24], duration:0.9});
 });
 map.fitBounds(VIEWS.overview, {padding:[20,20]});
@@ -1276,6 +1301,72 @@ function toggleLegend(){
 }
 handle.addEventListener('click', toggleLegend);
 handle.addEventListener('keydown', (e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggleLegend(); } });
+
+// ---- Căutare loc: oraș din listă sau coordonate (calcul local, față de poligonul benzii) ----
+const lkIn=document.getElementById('lookupIn'), lkOut=document.getElementById('lookupOut');
+const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9' ]+/g,' ').replace(/\s+/g,' ').trim();
+function inBand(lat,lon){
+  let inside=false;
+  for(let i=0,j=bandCoords.length-1;i<bandCoords.length;j=i++){
+    const [yi,xi]=bandCoords[i],[yj,xj]=bandCoords[j];
+    if(((yi>lat)!==(yj>lat))&&(lon<(xj-xi)*(lat-yi)/(yj-yi)+xi)) inside=!inside;
+  }
+  return inside;
+}
+function distLineKm(lat,lon,line){
+  const kx=111.19*Math.cos(lat*Math.PI/180), ky=111.19; let best=Infinity;
+  for(let i=0;i<line.length-1;i++){
+    const ax=(line[i][1]-lon)*kx, ay=(line[i][0]-lat)*ky, bx=(line[i+1][1]-lon)*kx, by=(line[i+1][0]-lat)*ky;
+    const dx=bx-ax, dy=by-ay, L2=dx*dx+dy*dy;
+    let t=L2?(-(ax*dx+ay*dy))/L2:0; t=Math.max(0,Math.min(1,t));
+    const d=Math.hypot(ax+t*dx, ay+t*dy); if(d<best) best=d;
+  }
+  return best;
+}
+function parseCoords(s){
+  const m=s.trim().match(/^(-?\d{1,3}(?:\.\d+)?)\s*[,;\s]\s*(-?\d{1,3}(?:\.\d+)?)$/);
+  return m?[parseFloat(m[1]),parseFloat(m[2])]:null;
+}
+function kmTxt(d){ return d<10?d.toFixed(1).replace('.',','):String(Math.round(d)); }
+function showCoordResult(lat,lon){
+  const inside=inBand(lat,lon);
+  const dEdge=Math.min(distLineKm(lat,lon,DATA.north),distLineKm(lat,lon,DATA.south));
+  const dCen=distLineKm(lat,lon,DATA.central);
+  let h;
+  if(inside){
+    h=`<b>În interiorul benzii de totalitate</b> — la cca. ${kmTxt(dCen)}&nbsp;km de linia centrală și cca. ${kmTxt(dEdge)}&nbsp;km de cea mai apropiată margine. Totalitatea e cu atât mai lungă cu cât ești mai aproape de axă.`;
+    if(dEdge<15) h+=` <b>Ești aproape de margine</b>: aici durata e foarte scurtă și sensibilă la locul exact.`;
+  } else {
+    h=`<b>În afara benzii de totalitate</b> — cea mai apropiată margine e la cca. ${kmTxt(dEdge)}&nbsp;km. Aici eclipsa este doar parțială.`;
+    if(dEdge<15) h+=` Ești aproape de margine; verifică la surse oficiale.`;
+  }
+  h+=`<br>Valori orientative (poligonul benzii are rezoluție de câțiva km, deci în apropierea marginii rezultatul poate fi inexact); nu folosi acest rezultat ca să decizi când e sigur să privești fără filtru. Vezi avertismentul de siguranță de mai jos.`;
+  lkOut.innerHTML=h;
+  map.flyTo([lat,lon], Math.max(map.getZoom(),6), {duration:0.9});
+}
+function pickPlace(p){
+  map.flyTo([p.lat,p.lon], Math.max(map.getZoom(),7), {duration:0.9});
+  setTimeout(()=>p.mk.openPopup(), 950);
+  lkOut.textContent=p.name+' ('+p.country+') — vezi fereastra de pe hartă.';
+  legend.classList.remove('open'); handle.setAttribute('aria-expanded','false');
+}
+document.getElementById('lookupForm').addEventListener('submit',(e)=>{
+  e.preventDefault();
+  const raw=lkIn.value.trim();
+  if(!raw){ lkOut.textContent='Scrie un oraș sau coordonate.'; return; }
+  const c=parseCoords(raw);
+  if(c){
+    if(Math.abs(c[0])>90||Math.abs(c[1])>180){ lkOut.textContent='Coordonate invalide: latitudinea trebuie să fie între −90 și 90, longitudinea între −180 și 180.'; return; }
+    showCoordResult(c[0],c[1]); return;
+  }
+  if(/^[-\d.,;\s]+$/.test(raw)){ lkOut.textContent='Nu am înțeles coordonatele. Folosește puncte zecimale, de ex. 36.53, -6.29 (lat, lon).'; return; }
+  const q=norm(raw);
+  const hits=PLACES.filter(p=>norm(p.name).includes(q)||norm(p.country).includes(q)).slice(0,8);
+  lkOut.innerHTML='';
+  if(!hits.length){ lkOut.textContent='Niciun loc din listă nu se potrivește cu „'+raw+'”. Încearcă fără diacritice sau introdu coordonatele (lat, lon).'; return; }
+  if(hits.length===1){ pickPlace(hits[0]); return; }
+  hits.forEach(p=>{ const b=document.createElement('button'); b.type='button'; b.className='lookup-pick'; b.textContent=p.name+' — '+p.country; b.addEventListener('click',()=>pickPlace(p)); lkOut.appendChild(b); });
+});
 
 // ---- Robustness: force Leaflet to recompute size on mobile viewport quirks
 // (address-bar show/hide, orientation change, keyboard, in-app webview timing) ----

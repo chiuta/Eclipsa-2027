@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-w7Ca4k1Rn1nHvCQBQc2PUWo8EMz6bwQ6h5Iv/hRrsxE=' 'sha256-fwIrV56XK9OeSJDjIqPHjdztUGtIW6NJiqENlwlS+m4='; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="application-version" content="1.0.0">
+<meta name="last-updated" content="2026-10-12">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-w7Ca4k1Rn1nHvCQBQc2PUWo8EMz6bwQ6h5Iv/hRrsxE=' 'sha256-PaDL5ObFxEJ43JGcysieP7zUuU6SOEXyLBJwvsiSheA='; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="description" content="Hartă offline a eclipsei totale de Soare din 2 august 2027: banda de totalitate (Spania, Africa de Nord, Peninsula Arabică), durate și acoperirea parțială pe orașe. Valori informative, calculate din elementele Besselian NASA.">
 <meta property="og:title" content="Eclipsa totală de Soare · 2 august 2027">
 <meta property="og:description" content="Harta benzii de totalitate, durate și procente de acoperire pe orașe. Fără server, fără cont, fără urmărire.">
@@ -785,6 +787,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .lookup-out{margin-top:10px;font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary);}
   .lookup-out b{color:var(--text-primary);}
   .lookup-pick{display:block;width:100%;text-align:left;margin:0 0 6px;font:500 12.5px/1.3 var(--font-body);color:var(--text-primary);background:var(--bg-panel);border:1px solid var(--line-subtle);border-radius:8px;padding:9px 11px;cursor:pointer;}
+  .verline{margin:6px 0 0;font:400 11px/1.6 var(--font-body);color:var(--text-tertiary);}
   .sources{margin-top:16px;font:400 11px/1.6 var(--font-body);color:var(--text-tertiary);border-top:1px solid var(--line-subtle);padding-top:12px;}
 
   @media (max-width:560px){:root{--peek:88px;}}
@@ -1149,6 +1152,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     </ul></div>
 
     <div class="sources">Traseu calculat din elementele Besselian oficiale NASA/GSFC (F.&nbsp;Espenak). Procentele orașelor: NASA/GSFC via nationaleclipse.com. Verificat cu ESA, Wikipedia, eclipsewise.com și moonblink.info. Verificare independentă (2026): recalculare din elementele Besselian NASA (ΔT&nbsp;=&nbsp;71,7&nbsp;s) — acoperirea parțială a celor 59 de orașe diferă în medie cu 0,05 puncte procentuale (max. 0,3); orele de maxim sunt trunchiate la minut; au fost corectate Delhi, Aswan și Abu Simbel. Duratele de totalitate pe orașe sunt valori aproximative, pentru centrul orașului (variază cu zeci de secunde după locul exact). Aplicație personală, neoficială. Conturul hărții (coaste și granițe): Natural&nbsp;Earth, desenat direct din date vectoriale — fără server de tile-uri; fișierul nu contactează nicio rețea.</div>
+    <p class="verline" id="app-version"><span id="app-version-label">Versiune</span>: v 1.0.0 · 2026-10-12</p>
   </div>
 </aside>
 </div>
@@ -1433,6 +1437,7 @@ function applyLang(){
   map.eachLayer(l=>{ try{ if(l.isPopupOpen&&l.isPopupOpen()) l.getPopup().update(); }catch(e){} });
   attrCtl.removeAttribution(ATTR_TXT[LANG==='en'?0:1]); attrCtl.addAttribution(ATTR_TXT[LANG==='en'?1:0]);
   lkOut.textContent='';
+  const avl=document.getElementById('app-version-label'); if(avl) avl.textContent=T('Versiune','Version');
 }
 // ---- Marker size follows zoom (less overlap on small screens / low zoom) ----
 function scaleMarkers(){

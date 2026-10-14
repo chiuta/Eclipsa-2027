@@ -1,0 +1,37 @@
+{
+  "name": "Eclipsa Totală de Soare",
+  "short_name": "Eclipsa",
+  "description": "Hartă offline a eclipsei totale de Soare din 2 august 2027: banda de totalitate (Spania, Africa de Nord, Peninsula Arabică), durate și acoperirea parțială pe orașe. Valori informative, calculate din elementele Besselian NASA.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "lang": "ro",
+  "background_color": "#1f2933",
+  "theme_color": "#1f2933",
+  "categories": [
+    "education",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "x_fff_pwa": 1
+}

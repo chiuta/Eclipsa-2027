@@ -11,8 +11,8 @@
     "serviceWorker"
   ],
   "storageKeys": [],
-  "sizeBytes": 871078,
-  "sha256": "e31be8b5c632a203ac599d28b539bf760c016387549c2e210d6e51dcc436b5ad",
+  "sizeBytes": 871098,
+  "sha256": "1f4685acaa1baccf86a3ff3b132f864f2d1e9a3767aa0c531d4ebcb76883675f",
   "csp": {
     "present": true,
     "directives": {

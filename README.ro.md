@@ -92,6 +92,6 @@ Licență: MIT — vezi fișierul `LICENSE`. Include Leaflet 1.9.4 (BSD-2-Clause
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
-## English summary
+## Rezumat
 
-Offline single-file Leaflet map of the 2 August 2027 total solar eclipse: totality band, central line, greatest-duration point, partial coverage for 59 cities. Band data from NASA Besselian elements; city values independently re-checked (mean deviation 0.05 percentage points). Prominent eye-safety warning (ISO 12312-2). No storage, no network requests.
+Hartă Leaflet offline într-un singur fișier a eclipsei totale de Soare din 2 august 2027: banda totalității, linia centrală, punctul de durată maximă, acoperire parțială pentru 59 de orașe. Datele benzii provin din elementele Besseliene NASA; valorile orașelor au fost reverificate independent (abatere medie de 0,05 puncte procentuale). Avertisment vizibil privind protecția ochilor (ISO 12312-2). Fără stocare, fără cereri de rețea.

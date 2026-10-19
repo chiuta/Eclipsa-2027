@@ -1,6 +1,6 @@
 # Eclipsa-2027 — harta eclipsei totale de Soare din 2 august 2027
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
+**Versiune:** 1.2.0 · **Ultima actualizare:** 19 octombrie 2026
 
 Hartă interactivă, într-un singur fișier HTML, a benzii de totalitate (Spania de sud, Africa de Nord, Peninsula Arabică), cu durate și acoperirea parțială pe orașe.
 
@@ -67,6 +67,9 @@ Toate se calculează local, cu modulul `FFF.ephem` (efemeride proprii, fără re
 Descarcă `index.html` și deschide-l în browser; funcționează fără internet.
 
 ## Istoric / Changelog
+
+### 1.2.0 — 2026-10-19
+- Nou: legătură „↗ TerRa” după rezultatul local — deschide TerRa (hartă 2D) la maximul eclipsei (local, sau global dacă eclipsa nu se vede), cu locul ales ca „Locația mea”. Coordonatele (rotunjite la ~1 km) apar doar în adresa filei noi; nu se trimit nicăieri.
 
 ### 1.1.0 — 2026-10-14
 - Nou: dialogul „La locul tău” (circumstanțe locale, numărătoare + repetiție, export `.ics`, listă de verificare, bandă calculată pe hartă, GPS cu consimțământ în două trepte); ciclu de limbi RO/EN/HU/DE pentru funcțiile noi; `FFF.ephem` și kitul `fff-kit` (`core`, `label`, `bundle`, `ephem`) integrate; `tests/fff-r8.test.mjs` (83 de verificări); captura de ecran actualizată (butonul nou). Datele NASA și restul aplicației nu au fost modificate (comparație înainte/după la 1280×800: singura diferență vizibilă e noul buton).

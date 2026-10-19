@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.0 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 1.3.0 · **Utolsó frissítés:** 2026-10-19
+
+A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Interaktív térkép egyetlen HTML-fájlban a teljesség sávjáról (Dél-Spanyolország, Észak-Afrika, Arab-félsziget), városonkénti időtartamokkal és részleges fedéssel.
 
@@ -21,7 +23,7 @@ Offline térkép a 2027. augusztus 2-i napfogyatkozásról (maximum 6 perc 23 mp
 - Ugrógombok (Európa, teljes nyomvonal, Cádiz–Gibraltár, Luxor, Románia), összecsukható jelmagyarázat.
 - „Hely keresése”: írd be a listában szereplő hely nevét (ékezetek nélkül) vagy tizedes koordinátákat `lat, lon`; koordináták esetén az alkalmazás helyben megmondja, hogy a pont a teljesség sávján belül van-e, és hány km-re van a középvonaltól / a legközelebbi széltől (a sáv sokszögéhez viszonyítva; tájékoztató jellegű, nem számolja a teljesség időtartamát).
 - Állandó szemvédelmi figyelmeztetés (ISO 12312-2).
-- Román és angol nyelvű felület: az „EN”/„RO” gomb a gombsorban (a nem román nyelvű böngészőkben angolul nyílik meg; a `?lang=ro` vagy `?lang=en` erőlteti a nyelvet). A választás nem kerül mentésre (az alkalmazás nem használ tárolást); a keresés elfogadja a városok angol nevét is (Lisbon, Warsaw stb.). A statikus, JavaScript nélküli változat román marad.
+- 8 nyelvű felület (RO, EN, FR, IT, ES, PT, DE, HU): a nyelvválasztó a gombsorban (a nem román nyelvű böngészőkben angolul nyílik meg; a `?lang=ro` vagy `?lang=en` erőlteti a nyelvet). A választás nem kerül mentésre (az alkalmazás nem használ tárolást); a keresés elfogadja a városok angol nevét is (Lisbon, Warsaw stb.). A statikus, JavaScript nélküli változat román marad.
 - A városjelölők kis nagyításnál összezsugorodnak, hogy keskeny képernyőkön kevésbé fedjék egymást.
 
 ## Új funkciók (1.1.0)
@@ -34,7 +36,7 @@ Mind helyben számolódik, az `FFF.ephem` modullal (saját efemeridák, hálóza
 - **`.ics`-export** (naptár): egy esemény a teljes fogyatkozásra (C1–C4), teljesség esetén pedig egy a teljességre (C2–C3), opcionális `VALARM` riasztásokkal (egy nappal és 15 perccel előtte; 5 perccel a teljesség előtt); idők UTC-ben, sorok 75 oktetnél hajtogatva, CRLF.
 - **Ellenőrzőlista a biztonságos megfigyeléshez** (ISO 12312-2 szűrők, az a pillanat, amikor szabad szemmel nézni csak a teljesség alatt biztonságos, fényképezés, gyerekek, utazás), haladásjelzéssel; a pipák nem maradnak meg munkamenetek között.
 - **Számított sáv a térképen:** egy jelölőnégyzet ráhelyezi a Leaflet térképre az alkalmazásban számított pontozott vonalakat (északi határ, déli határ, középvonal), a beágyazott NASA-adatokból származók mellett, és megmutatja a köztük lévő eltérést: a közös szakaszon legfeljebb 3,6 km, átlagosan 0,9 km (2026. 10. 14-én mérve).
-- A nyelvi ciklus mostantól RO → EN → HU → DE (a fejléc gombja); az `html[lang]` követi a választott nyelvet. Az alkalmazás régi szövegei csak románul és angolul maradnak (HU/DE esetén az angol látható); az új funkciók mind a négy nyelven elérhetők. Az új funkciók magyar (hu) és német (de) fordításai **gépiek, és anyanyelvi beszélők nem ellenőrizték őket**; ugyanez igaz lenne bármely később hozzáadott nyelvre (fr/it/es/pt nem érhető el ebben az alkalmazásban).
+- A felület 8 nyelvű (RO, EN, FR, IT, ES, PT, DE, HU), a nyelvválasztóból választható; az `html[lang]` követi a választott nyelvet. Az alkalmazás hosszú jegyzetei csak románul és angolul maradnak (a többi nyelven az angol látható). Az fr/it/es/pt/de/hu fordítások **automatikusak, és anyanyelvi beszélők nem ellenőrizték őket**.
 
 ## Használati útmutató
 

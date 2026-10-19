@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.0 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 1.3.0 · **Zuletzt aktualisiert:** 2026-10-19
+
+Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Interaktive Karte in einer einzigen HTML-Datei des Totalitätsstreifens (Südspanien, Nordafrika, Arabische Halbinsel), mit Dauern und partieller Bedeckung nach Städten.
 
@@ -21,7 +23,7 @@ Eine Offline-Karte der Finsternis vom 2. August 2027 (Maximum 6 min 23 s, Saros 
 - Sprungschaltflächen (Europa, gesamte Zugbahn, Cádiz–Gibraltar, Luxor, Rumänien), einklappbare Legende.
 - „Ort suchen“: Gib den Namen eines Ortes aus der Liste (ohne Diakritika) oder Dezimalkoordinaten `lat, lon` ein; bei Koordinaten teilt die Anwendung lokal mit, ob der Punkt innerhalb des Totalitätsstreifens liegt und wie viele km er von der Mittellinie / vom nächstgelegenen Rand entfernt ist (bezogen auf das Streifenpolygon; Richtwert, berechnet nicht die Dauer der Totalität).
 - Dauerhafte Warnung zum Augenschutz (ISO 12312-2).
-- Oberfläche auf Rumänisch und Englisch: Schaltfläche „EN“/„RO“ in der Schaltflächenreihe (bei Browsern mit einer anderen Sprache als Rumänisch öffnet sich die Seite auf Englisch; `?lang=ro` oder `?lang=en` erzwingt die Sprache). Die Wahl wird nicht gespeichert (die Anwendung nutzt keinen Speicher); die Suche akzeptiert auch englische Städtenamen (Lisbon, Warsaw usw.). Die statische Variante ohne JavaScript bleibt auf Rumänisch.
+- Oberfläche in 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU): Sprachwähler in der Schaltflächenreihe (bei Browsern mit einer anderen Sprache als Rumänisch öffnet sich die Seite auf Englisch; `?lang=ro` oder `?lang=en` erzwingt die Sprache). Die Wahl wird nicht gespeichert (die Anwendung nutzt keinen Speicher); die Suche akzeptiert auch englische Städtenamen (Lisbon, Warsaw usw.). Die statische Variante ohne JavaScript bleibt auf Rumänisch.
 - Die Städtemarkierungen verkleinern sich bei geringem Zoom, damit sie sich auf schmalen Bildschirmen weniger überlagern.
 
 ## Neue Funktionen (1.1.0)
@@ -34,7 +36,7 @@ Alles wird lokal berechnet, mit dem Modul `FFF.ephem` (eigene Ephemeriden, ohne 
 - **`.ics`-Export** (Kalender): ein Termin für die gesamte Finsternis (C1–C4) und, bei Totalität, einer für die Totalität (C2–C3), mit optionalen `VALARM`-Alarmen (einen Tag und 15 Minuten vorher; 5 Minuten vor der Totalität); Zeiten in UTC, Zeilen bei 75 Oktetten gefaltet, CRLF.
 - **Checkliste für sicheres Beobachten** (ISO-12312-2-Filter, der Moment, in dem das Betrachten mit bloßem Auge nur während der Totalität sicher ist, Fotografieren, Kinder, Anreise), mit Fortschritt; die Häkchen werden nicht zwischen Sitzungen gespeichert.
 - **Berechneter Streifen auf der Karte:** Ein Häkchen legt über die Leaflet-Karte die in der Anwendung berechneten gepunkteten Linien (Nordgrenze, Südgrenze, Mittellinie), zusätzlich zu denen aus den eingebetteten NASA-Daten, und zeigt die Abweichung zwischen ihnen: auf dem gemeinsamen Abschnitt höchstens 3,6 km und im Mittel 0,9 km (gemessen am 14.10.2026).
-- Der Sprachzyklus ist jetzt RO → EN → HU → DE (die Schaltfläche in der Kopfzeile); `html[lang]` folgt der gewählten Sprache. Die alten Texte der Anwendung bleiben nur auf Rumänisch und Englisch (bei HU/DE wird Englisch angezeigt); die neuen Funktionen haben alle vier Sprachen. Die ungarischen (hu) und deutschen (de) Übersetzungen der neuen Funktionen sind **automatisch und nicht von Muttersprachlern geprüft**; ebenso wäre es bei jeder später hinzugefügten Sprache (fr/it/es/pt werden in dieser Anwendung nicht angeboten).
+- Die Oberfläche hat 8 Sprachen (RO, EN, FR, IT, ES, PT, DE, HU), die im Sprachwähler ausgewählt werden; `html[lang]` folgt der gewählten Sprache. Die langen Notizen der Anwendung bleiben nur auf Rumänisch und Englisch (in den anderen Sprachen wird Englisch angezeigt). Die Übersetzungen fr/it/es/pt/de/hu sind **automatisch und nicht von Muttersprachlern geprüft**.
 
 ## Bedienungsanleitung
 

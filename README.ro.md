@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.0 · **Ultima actualizare:** 2026-10-19
+**Versiune:** 1.3.0 · **Ultima actualizare:** 2026-10-19
+
+Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Hartă interactivă, într-un singur fișier HTML, a benzii de totalitate (Spania de sud, Africa de Nord, Peninsula Arabică), cu durate și acoperirea parțială pe orașe.
 
@@ -21,7 +23,7 @@ O hartă offline a eclipsei din 2 august 2027 (maxim 6m 23s, Saros 136). Banda �
 - Butoane de salt (Europa, traseu complet, Cádiz–Gibraltar, Luxor, România), legendă pliabilă.
 - „Caută un loc”: scrii numele unui loc din listă (fără diacritice) sau coordonate zecimale `lat, lon`; pentru coordonate aplicația spune, local, dacă punctul e în interiorul benzii de totalitate și la câți km este de linia centrală / de cea mai apropiată margine (față de poligonul benzii; orientativ, nu calculează durata totalității).
 - Avertisment permanent de siguranță a ochilor (ISO 12312-2).
-- Interfață în română și engleză: butonul „EN”/„RO” din rândul de butoane (la browsere cu altă limbă decât româna se deschide în engleză; `?lang=ro` sau `?lang=en` forțează limba). Alegerea nu se salvează (aplicația nu folosește stocare); căutarea acceptă și numele englezești ale orașelor (Lisbon, Warsaw etc.). Varianta statică, fără JavaScript, rămâne în română.
+- Interfață în 8 limbi (RO, EN, FR, IT, ES, PT, DE, HU): selectorul de limbă din rândul de butoane (la browsere cu altă limbă decât româna se deschide în engleză; `?lang=ro` sau `?lang=en` forțează limba). Alegerea nu se salvează (aplicația nu folosește stocare); căutarea acceptă și numele englezești ale orașelor (Lisbon, Warsaw etc.). Varianta statică, fără JavaScript, rămâne în română.
 - Marcajele orașelor se micșorează la zoom mic, ca să se suprapună mai puțin pe ecrane înguste.
 
 ## Funcții noi (1.1.0)
@@ -34,7 +36,7 @@ Toate se calculează local, cu modulul `FFF.ephem` (efemeride proprii, fără re
 - **Export `.ics`** (calendar): un eveniment pentru întreaga eclipsă (C1–C4) și, la totalitate, unul pentru totalitate (C2–C3), cu alarme `VALARM` opționale (cu o zi și cu 15 minute înainte; 5 minute înainte de totalitate); ore în UTC, linii pliate la 75 de octeți, CRLF.
 - **Listă de verificare pentru observarea în siguranță** (filtre ISO 12312-2, momentul în care e sigur privitul cu ochiul liber doar în totalitate, fotografiere, copii, deplasare), cu progres; bifele nu se salvează între sesiuni.
 - **Banda calculată pe hartă:** o bifă suprapune pe harta Leaflet liniile punctate (limita nordică, cea sudică, linia centrală) calculate în aplicație, pe lângă cele din datele NASA încorporate, și afișează abaterea dintre ele: pe porțiunea comună, maximum 3,6 km și în medie 0,9 km (măsurat la 14.10.2026).
-- Ciclul de limbi este acum RO → EN → HU → DE (butonul din antet); `html[lang]` urmează limba aleasă. Textele vechi ale aplicației rămân doar în română și engleză (în HU/DE se vede engleza); funcțiile noi au toate cele patru limbi. Traducerile în maghiară (hu) și germană (de) ale funcțiilor noi sunt **automate și neverificate nativ**; la fel ar fi orice altă limbă adăugată ulterior (fr/it/es/pt nu sunt oferite în această aplicație).
+- Interfața are 8 limbi (RO, EN, FR, IT, ES, PT, DE, HU), alese din selectorul de limbă; `html[lang]` urmează limba aleasă. Notele lungi ale aplicației rămân doar în română și engleză (în celelalte limbi se vede engleza). Traducerile fr/it/es/pt/de/hu sunt **automate și neverificate nativ**.
 
 ## Manual de utilizare
 

@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.2.0 · **Dernière mise à jour :** 2026-10-19
+**Version :** 1.3.0 · **Dernière mise à jour :** 2026-10-19
+
+Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Carte interactive, dans un seul fichier HTML, de la bande de totalité (sud de l'Espagne, Afrique du Nord, péninsule Arabique), avec les durées et la couverture partielle par ville.
 
@@ -21,7 +23,7 @@ Une carte hors ligne de l'éclipse du 2 août 2027 (maximum 6 min 23 s, Saros 13
 - Boutons de saut (Europe, tracé complet, Cadix–Gibraltar, Louxor, Roumanie), légende repliable.
 - « Rechercher un lieu » : saisissez le nom d'un lieu de la liste (sans signes diacritiques) ou des coordonnées décimales `lat, lon` ; pour des coordonnées, l'application indique, en local, si le point est à l'intérieur de la bande de totalité et à combien de km il se trouve de la ligne centrale / du bord le plus proche (par rapport au polygone de la bande ; indicatif, ne calcule pas la durée de la totalité).
 - Avertissement permanent de sécurité oculaire (ISO 12312-2).
-- Interface en roumain et en anglais : bouton « EN »/« RO » dans la rangée de boutons (pour les navigateurs dont la langue n'est pas le roumain, la page s'ouvre en anglais ; `?lang=ro` ou `?lang=en` force la langue). Le choix n'est pas enregistré (l'application n'utilise aucun stockage) ; la recherche accepte aussi les noms anglais des villes (Lisbon, Warsaw, etc.). La variante statique, sans JavaScript, reste en roumain.
+- Interface en 8 langues (RO, EN, FR, IT, ES, PT, DE, HU) : sélecteur de langue dans la rangée de boutons (pour les navigateurs dont la langue n'est pas le roumain, la page s'ouvre en anglais ; `?lang=ro` ou `?lang=en` force la langue). Le choix n'est pas enregistré (l'application n'utilise aucun stockage) ; la recherche accepte aussi les noms anglais des villes (Lisbon, Warsaw, etc.). La variante statique, sans JavaScript, reste en roumain.
 - Les marqueurs des villes rétrécissent à faible zoom, afin de se chevaucher moins sur les écrans étroits.
 
 ## Nouvelles fonctionnalités (1.1.0)
@@ -34,7 +36,7 @@ Tout est calculé en local, avec le module `FFF.ephem` (éphémérides propres, 
 - **Export `.ics`** (calendrier) : un événement pour toute l'éclipse (C1–C4) et, en cas de totalité, un pour la totalité (C2–C3), avec des alarmes `VALARM` facultatives (un jour et 15 minutes avant ; 5 minutes avant la totalité) ; heures en UTC, lignes repliées à 75 octets, CRLF.
 - **Liste de contrôle pour l'observation en sécurité** (filtres ISO 12312-2, moment où l'observation à l'œil nu n'est sûre que pendant la totalité, photographie, enfants, déplacement), avec progression ; les coches ne sont pas enregistrées entre les sessions.
 - **Bande calculée sur la carte :** une case à cocher superpose à la carte Leaflet les lignes pointillées (limite nord, limite sud, ligne centrale) calculées dans l'application, en plus de celles issues des données NASA intégrées, et affiche l'écart entre elles : sur la portion commune, 3,6 km au maximum et 0,9 km en moyenne (mesuré le 14.10.2026).
-- Le cycle des langues est désormais RO → EN → HU → DE (le bouton de l'en-tête) ; `html[lang]` suit la langue choisie. Les anciens textes de l'application restent uniquement en roumain et en anglais (en HU/DE, c'est l'anglais qui s'affiche) ; les nouvelles fonctionnalités disposent des quatre langues. Les traductions en hongrois (hu) et en allemand (de) des nouvelles fonctionnalités sont **automatiques et non vérifiées par des locuteurs natifs** ; il en irait de même de toute autre langue ajoutée par la suite (fr/it/es/pt ne sont pas proposées dans cette application).
+- L'interface compte 8 langues (RO, EN, FR, IT, ES, PT, DE, HU), choisies dans le sélecteur de langue ; `html[lang]` suit la langue choisie. Les longues notes de l'application restent uniquement en roumain et en anglais (dans les autres langues, c'est l'anglais qui s'affiche). Les traductions fr/it/es/pt/de/hu sont **automatiques et non vérifiées par des locuteurs natifs**.
 
 ## Mode d'emploi
 

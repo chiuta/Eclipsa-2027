@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.2.0 · **Última atualização:** 2026-10-19
+**Versão:** 1.3.0 · **Última atualização:** 2026-10-19
+
+Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Mapa interativo, num único ficheiro HTML, da faixa de totalidade (sul de Espanha, Norte de África, Península Arábica), com durações e cobertura parcial por cidades.
 
@@ -21,7 +23,7 @@ Um mapa offline do eclipse de 2 de agosto de 2027 (máximo 6 min 23 s, Saros 136
 - Botões de salto (Europa, percurso completo, Cádis–Gibraltar, Luxor, Roménia), legenda recolhível.
 - «Procurar um local»: escreva o nome de um local da lista (sem sinais diacríticos) ou coordenadas decimais `lat, lon`; para coordenadas, a aplicação indica, localmente, se o ponto está dentro da faixa de totalidade e a quantos km se encontra da linha central / do limite mais próximo (relativamente ao polígono da faixa; indicativo, não calcula a duração da totalidade).
 - Aviso permanente de segurança ocular (ISO 12312-2).
-- Interface em romeno e inglês: botão «EN»/«RO» na linha de botões (em navegadores com uma língua diferente do romeno abre em inglês; `?lang=ro` ou `?lang=en` força a língua). A escolha não é guardada (a aplicação não usa armazenamento); a pesquisa aceita também os nomes ingleses das cidades (Lisbon, Warsaw, etc.). A variante estática, sem JavaScript, permanece em romeno.
+- Interface em 8 idiomas (RO, EN, FR, IT, ES, PT, DE, HU): seletor de idioma na linha de botões (em navegadores com uma língua diferente do romeno abre em inglês; `?lang=ro` ou `?lang=en` força a língua). A escolha não é guardada (a aplicação não usa armazenamento); a pesquisa aceita também os nomes ingleses das cidades (Lisbon, Warsaw, etc.). A variante estática, sem JavaScript, permanece em romeno.
 - Os marcadores das cidades diminuem com pouco zoom, para se sobreporem menos em ecrãs estreitos.
 
 ## Novas funcionalidades (1.1.0)
@@ -34,7 +36,7 @@ Tudo é calculado localmente, com o módulo `FFF.ephem` (efemérides próprias, 
 - **Exportação `.ics`** (calendário): um evento para todo o eclipse (C1–C4) e, em caso de totalidade, um para a totalidade (C2–C3), com alarmes `VALARM` opcionais (um dia e 15 minutos antes; 5 minutos antes da totalidade); horas em UTC, linhas dobradas aos 75 octetos, CRLF.
 - **Lista de verificação para a observação em segurança** (filtros ISO 12312-2, o momento em que olhar a olho nu é seguro apenas durante a totalidade, fotografia, crianças, deslocação), com progresso; as marcações não são guardadas entre sessões.
 - **Faixa calculada no mapa:** uma caixa sobrepõe ao mapa Leaflet as linhas a tracejado (limite norte, limite sul, linha central) calculadas na aplicação, além das dos dados NASA incorporados, e mostra o desvio entre elas: no troço comum, no máximo 3,6 km e em média 0,9 km (medido em 14.10.2026).
-- O ciclo de línguas é agora RO → EN → HU → DE (o botão do cabeçalho); `html[lang]` segue a língua escolhida. Os textos antigos da aplicação permanecem apenas em romeno e inglês (em HU/DE vê-se o inglês); as novas funcionalidades têm as quatro línguas. As traduções para húngaro (hu) e alemão (de) das novas funcionalidades são **automáticas e não verificadas por falantes nativos**; o mesmo aconteceria com qualquer outra língua acrescentada depois (fr/it/es/pt não são oferecidas nesta aplicação).
+- A interface tem 8 línguas (RO, EN, FR, IT, ES, PT, DE, HU), escolhidas no seletor de língua; `html[lang]` segue a língua escolhida. As notas longas da aplicação permanecem apenas em romeno e inglês (nas outras línguas vê-se o inglês). As traduções fr/it/es/pt/de/hu são **automáticas e não verificadas por falantes nativos**.
 
 ## Manual de utilização
 

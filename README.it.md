@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.0 · **Ultimo aggiornamento:** 2026-10-19
+**Versione:** 1.3.0 · **Ultimo aggiornamento:** 2026-10-19
+
+Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Mappa interattiva, in un unico file HTML, della fascia di totalità (Spagna meridionale, Nord Africa, Penisola Arabica), con durate e copertura parziale per città.
 
@@ -21,7 +23,7 @@ Una mappa offline dell'eclissi del 2 agosto 2027 (massimo 6 min 23 s, Saros 136)
 - Pulsanti di salto (Europa, percorso completo, Cadice–Gibilterra, Luxor, Romania), legenda comprimibile.
 - «Cerca un luogo»: scrivi il nome di un luogo dell'elenco (senza segni diacritici) o coordinate decimali `lat, lon`; per le coordinate l'applicazione indica, in locale, se il punto è all'interno della fascia di totalità e a quanti km si trova dalla linea centrale / dal bordo più vicino (rispetto al poligono della fascia; indicativo, non calcola la durata della totalità).
 - Avviso permanente di sicurezza per gli occhi (ISO 12312-2).
-- Interfaccia in rumeno e inglese: pulsante «EN»/«RO» nella riga dei pulsanti (nei browser con una lingua diversa dal rumeno si apre in inglese; `?lang=ro` o `?lang=en` forza la lingua). La scelta non viene salvata (l'applicazione non usa alcuna memorizzazione); la ricerca accetta anche i nomi inglesi delle città (Lisbon, Warsaw ecc.). La variante statica, senza JavaScript, resta in rumeno.
+- Interfaccia in 8 lingue (RO, EN, FR, IT, ES, PT, DE, HU): selettore di lingua nella riga dei pulsanti (nei browser con una lingua diversa dal rumeno si apre in inglese; `?lang=ro` o `?lang=en` forza la lingua). La scelta non viene salvata (l'applicazione non usa alcuna memorizzazione); la ricerca accetta anche i nomi inglesi delle città (Lisbon, Warsaw ecc.). La variante statica, senza JavaScript, resta in rumeno.
 - I segnaposto delle città si rimpiccioliscono a zoom ridotto, per sovrapporsi meno sugli schermi stretti.
 
 ## Nuove funzionalità (1.1.0)
@@ -34,7 +36,7 @@ Tutto viene calcolato in locale, con il modulo `FFF.ephem` (effemeridi proprie, 
 - **Esportazione `.ics`** (calendario): un evento per l'intera eclissi (C1–C4) e, per la totalità, uno per la totalità (C2–C3), con allarmi `VALARM` facoltativi (un giorno e 15 minuti prima; 5 minuti prima della totalità); orari in UTC, righe ripiegate a 75 ottetti, CRLF.
 - **Lista di controllo per l'osservazione in sicurezza** (filtri ISO 12312-2, il momento in cui guardare a occhio nudo è sicuro solo durante la totalità, fotografia, bambini, spostamenti), con avanzamento; le spunte non vengono salvate tra le sessioni.
 - **Fascia calcolata sulla mappa:** una casella sovrappone alla mappa Leaflet le linee tratteggiate (limite nord, limite sud, linea centrale) calcolate nell'applicazione, oltre a quelle dei dati NASA incorporati, e mostra lo scarto tra di esse: sul tratto comune, al massimo 3,6 km e in media 0,9 km (misurato il 14.10.2026).
-- Il ciclo delle lingue è ora RO → EN → HU → DE (il pulsante nell'intestazione); `html[lang]` segue la lingua scelta. I vecchi testi dell'applicazione restano solo in rumeno e inglese (in HU/DE si vede l'inglese); le nuove funzionalità hanno tutte e quattro le lingue. Le traduzioni in ungherese (hu) e tedesco (de) delle nuove funzionalità sono **automatiche e non verificate da madrelingua**; lo stesso varrebbe per qualsiasi altra lingua aggiunta in seguito (fr/it/es/pt non sono offerte in questa applicazione).
+- L'interfaccia ha 8 lingue (RO, EN, FR, IT, ES, PT, DE, HU), scelte dal selettore di lingua; `html[lang]` segue la lingua scelta. Le note lunghe dell'applicazione restano solo in rumeno e inglese (nelle altre lingue si vede l'inglese). Le traduzioni fr/it/es/pt/de/hu sono **automatiche e non verificate da madrelingua**.
 
 ## Guida all'uso
 

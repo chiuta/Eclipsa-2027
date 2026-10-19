@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.0 · **Last updated:** 2026-10-19
+**Version:** 1.3.0 · **Last updated:** 2026-10-19
+
+Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 An interactive map, in a single HTML file, of the band of totality (southern Spain, North Africa, the Arabian Peninsula), with durations and partial coverage for cities.
 
@@ -21,7 +23,7 @@ An offline map of the eclipse of 2 August 2027 (maximum 6m 23s, Saros 136). The 
 - Jump buttons (Europe, full track, Cádiz–Gibraltar, Luxor, Romania), collapsible legend.
 - "Search a place": type the name of a place from the list (without diacritics) or decimal coordinates `lat, lon`; for coordinates the application tells you, locally, whether the point lies inside the band of totality and how many km it is from the central line / from the nearest edge (relative to the band polygon; indicative, it does not compute the duration of totality).
 - Permanent eye-safety warning (ISO 12312-2).
-- Interface in Romanian and English: the "EN"/"RO" button in the button row (for browsers with a language other than Romanian it opens in English; `?lang=ro` or `?lang=en` forces the language). The choice is not saved (the application uses no storage); the search also accepts English city names (Lisbon, Warsaw, etc.). The static variant, without JavaScript, remains in Romanian.
+- Interface in 8 languages (RO, EN, FR, IT, ES, PT, DE, HU): the language selector in the button row (for browsers with a language other than Romanian it opens in English; `?lang=ro` or `?lang=en` forces the language). The choice is not saved (the application uses no storage); the search also accepts English city names (Lisbon, Warsaw, etc.). The static variant, without JavaScript, remains in Romanian.
 - City markers shrink at low zoom, so that they overlap less on narrow screens.
 
 ## New features (1.1.0)
@@ -34,7 +36,7 @@ All are computed locally, with the `FFF.ephem` module (own ephemerides, no netwo
 - **`.ics` export** (calendar): one event for the entire eclipse (C1–C4) and, for totality, one for totality (C2–C3), with optional `VALARM` alarms (one day and 15 minutes before; 5 minutes before totality); times in UTC, lines folded at 75 octets, CRLF.
 - **Checklist for safe viewing** (ISO 12312-2 filters, the moment when looking with the naked eye is safe only during totality, photography, children, travel), with progress; the ticks are not saved between sessions.
 - **Computed band on the map:** a tick overlays on the Leaflet map the dotted lines (northern limit, southern limit, central line) computed in the application, in addition to those from the embedded NASA data, and shows the deviation between them: over the common stretch, a maximum of 3.6 km and on average 0.9 km (measured on 14.10.2026).
-- The language cycle is now RO → EN → HU → DE (the button in the header); `html[lang]` follows the chosen language. The application's old texts remain only in Romanian and English (in HU/DE English is shown); the new features have all four languages. The Hungarian (hu) and German (de) translations of the new features are **automatic and not verified by native speakers**; so would any other language added later (fr/it/es/pt are not offered in this application).
+- The interface has 8 languages (RO, EN, FR, IT, ES, PT, DE, HU), chosen from the language selector; `html[lang]` follows the chosen language. The application's long notes remain only in Romanian and English (in the other languages English is shown). The fr/it/es/pt/de/hu translations are **automatic and not verified by native speakers**.
 
 ## User guide
 

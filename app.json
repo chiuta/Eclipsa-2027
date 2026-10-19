@@ -11,8 +11,8 @@
     "serviceWorker"
   ],
   "storageKeys": [],
-  "sizeBytes": 873778,
-  "sha256": "534727325299ffa5d9df13121cb6bf2acd8cc17746e5c1fc0aacba2a5e80950d",
+  "sizeBytes": 874414,
+  "sha256": "fdc9a83df36f05e719243233e466ed2c53fb5084c4ea1639747d753a98ae3ccf",
   "csp": {
     "present": true,
     "directives": {
@@ -51,7 +51,7 @@
     ]
   },
   "kit": {
-    "version": "1.1.0",
+    "version": "1.1.1",
     "modules": [
       "core",
       "label",

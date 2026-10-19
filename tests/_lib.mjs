@@ -35,3 +35,6 @@ export async function axeRun(page) {
   return page.evaluate(async () => { const r = await window.axe.run(document, {resultTypes: ["violations"]}); return r.violations.map(v => v.id + ":" + v.nodes.length + ":" + v.nodes.slice(0, 2).map(n => n.target.join(" ")).join("|")); });
 }
 export async function hOverflow(page) { return page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth); }
+
+/** Comută limba interfeței (selectorul #langBtn) */
+export async function setLang(page, l, sel = "#langBtn") { await page.selectOption(sel, l); await page.waitForTimeout(200); }

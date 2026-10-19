@@ -1,90 +1,94 @@
-# Eclipsa-2027 — harta eclipsei totale de Soare din 2 august 2027
+# Eclipsa-2027 — map of the total solar eclipse of 2 August 2027
 
-**Versiune:** 1.2.0 · **Ultima actualizare:** 19 octombrie 2026
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-Hartă interactivă, într-un singur fișier HTML, a benzii de totalitate (Spania de sud, Africa de Nord, Peninsula Arabică), cu durate și acoperirea parțială pe orașe.
+**Version:** 1.2.0 · **Last updated:** 2026-10-19
 
-**Live:** https://chiuta.github.io/Eclipsa-2027/
+An interactive map, in a single HTML file, of the band of totality (southern Spain, North Africa, the Arabian Peninsula), with durations and partial coverage for cities.
 
-![Captura de ecran](screenshot.png)
+**Live app:** https://chiuta.github.io/Eclipsa-2027/
 
-## Ce este
+![Screenshot](screenshot.png)
 
-O hartă offline a eclipsei din 2 august 2027 (maxim 6m 23s, Saros 136). Banda și linia centrală provin din elementele Besselian NASA/GSFC (F. Espenak); conturul hărții este Natural Earth, desenat din date vectoriale (fără tile-uri). Dacă JavaScript lipsește, se afișează o variantă statică (SVG + tabele).
+## What it is
 
-## Funcții
+An offline map of the eclipse of 2 August 2027 (maximum 6m 23s, Saros 136). The band and the central line come from the NASA/GSFC Besselian elements (F. Espenak); the map outline is Natural Earth, drawn from vector data (no tiles). If JavaScript is missing, a static variant (SVG + tables) is displayed.
 
-- Hartă Leaflet cu bandă de totalitate, linie centrală, punctul de durată maximă (26°49′N 31°08′E).
-- 59 de orașe cu procent de acoperire parțială și ora maximului (fus local); 10 locuri pe/lângă traseu cu durata totalității (aproximativă).
-- Butoane de salt (Europa, traseu complet, Cádiz–Gibraltar, Luxor, România), legendă pliabilă.
-- „Caută un loc”: scrii numele unui loc din listă (fără diacritice) sau coordonate zecimale `lat, lon`; pentru coordonate aplicația spune, local, dacă punctul e în interiorul benzii de totalitate și la câți km este de linia centrală / de cea mai apropiată margine (față de poligonul benzii; orientativ, nu calculează durata totalității).
-- Avertisment permanent de siguranță a ochilor (ISO 12312-2).
-- Interfață în română și engleză: butonul „EN”/„RO” din rândul de butoane (la browsere cu altă limbă decât româna se deschide în engleză; `?lang=ro` sau `?lang=en` forțează limba). Alegerea nu se salvează (aplicația nu folosește stocare); căutarea acceptă și numele englezești ale orașelor (Lisbon, Warsaw etc.). Varianta statică, fără JavaScript, rămâne în română.
-- Marcajele orașelor se micșorează la zoom mic, ca să se suprapună mai puțin pe ecrane înguste.
+## Features
 
-## Funcții noi (1.1.0)
+- Leaflet map with the band of totality, the central line, and the point of greatest duration (26°49′N 31°08′E).
+- 59 cities with partial-coverage percentage and time of maximum (local time zone); 10 places on or near the track with the duration of totality (approximate).
+- Jump buttons (Europe, full track, Cádiz–Gibraltar, Luxor, Romania), collapsible legend.
+- "Search a place": type the name of a place from the list (without diacritics) or decimal coordinates `lat, lon`; for coordinates the application tells you, locally, whether the point lies inside the band of totality and how many km it is from the central line / from the nearest edge (relative to the band polygon; indicative, it does not compute the duration of totality).
+- Permanent eye-safety warning (ISO 12312-2).
+- Interface in Romanian and English: the "EN"/"RO" button in the button row (for browsers with a language other than Romanian it opens in English; `?lang=ro` or `?lang=en` forces the language). The choice is not saved (the application uses no storage); the search also accepts English city names (Lisbon, Warsaw, etc.). The static variant, without JavaScript, remains in Romanian.
+- City markers shrink at low zoom, so that they overlap less on narrow screens.
 
-Toate se calculează local, cu modulul `FFF.ephem` (efemeride proprii, fără rețea), în dialogul „La locul tău” (butonul din rândul de butoane; apare și ca „Circumstanțe locale ›” după „Caută un loc”):
+## New features (1.1.0)
 
-- **Circumstanțe locale ale eclipsei din 2 august 2027** pentru orice loc: contactele C1, C2, maxim, C3, C4 (UTC, iar ora locală când fusul orar IANA e cunoscut), magnitudinea, obscurarea, durata totalității și a fazei parțiale, altitudinea și azimutul Soarelui, poziția față de banda totalității (în/în afara, distanța de margine). Locul: căutare după nume (cele 59 de orașe, RO/EN), coordonate `lat, lon`, sau GPS.
-- **GPS cu consimțământ explicit, în două trepte:** butonul „Folosește locația mea (GPS)” deschide întâi o confirmare în pagină; abia după „Da” se face o singură cerere `getCurrentPosition`. Coordonatele nu se salvează și nu se trimit nicăieri.
-- **Numărătoare inversă** până la următorul contact, cu faza curentă (înainte, parțial, totalitate — unde numără timpul rămas până la C3 —, după) și buton **„Repetiție”** care pornește un ceas simulat cu 30 s înainte de C2 (sau de maxim, la eclipsă parțială) ca să exersezi.
-- **Export `.ics`** (calendar): un eveniment pentru întreaga eclipsă (C1–C4) și, la totalitate, unul pentru totalitate (C2–C3), cu alarme `VALARM` opționale (cu o zi și cu 15 minute înainte; 5 minute înainte de totalitate); ore în UTC, linii pliate la 75 de octeți, CRLF.
-- **Listă de verificare pentru observarea în siguranță** (filtre ISO 12312-2, momentul în care e sigur privitul cu ochiul liber doar în totalitate, fotografiere, copii, deplasare), cu progres; bifele nu se salvează între sesiuni.
-- **Banda calculată pe hartă:** o bifă suprapune pe harta Leaflet liniile punctate (limita nordică, cea sudică, linia centrală) calculate în aplicație, pe lângă cele din datele NASA încorporate, și afișează abaterea dintre ele: pe porțiunea comună, maximum 3,6 km și în medie 0,9 km (măsurat la 14.10.2026).
-- Ciclul de limbi este acum RO → EN → HU → DE (butonul din antet); `html[lang]` urmează limba aleasă. Textele vechi ale aplicației rămân doar în română și engleză (în HU/DE se vede engleza); funcțiile noi au toate cele patru limbi. Traducerile în maghiară (hu) și germană (de) ale funcțiilor noi sunt **automate și neverificate nativ**; la fel ar fi orice altă limbă adăugată ulterior (fr/it/es/pt nu sunt oferite în această aplicație).
+All are computed locally, with the `FFF.ephem` module (own ephemerides, no network), in the "At your location" dialog (the button in the button row; it also appears as "Local circumstances ›" after "Search a place"):
 
-## Manual de utilizare
+- **Local circumstances of the 2 August 2027 eclipse** for any place: contacts C1, C2, maximum, C3, C4 (UTC, and local time when the IANA time zone is known), magnitude, obscuration, duration of totality and of the partial phase, altitude and azimuth of the Sun, position relative to the band of totality (inside/outside, distance from the edge). The place: search by name (the 59 cities, RO/EN), coordinates `lat, lon`, or GPS.
+- **GPS with explicit consent, in two steps:** the "Use my location (GPS)" button first opens an in-page confirmation; only after "Yes" is a single `getCurrentPosition` request made. The coordinates are not saved and are not sent anywhere.
+- **Countdown** to the next contact, with the current phase (before, partial, totality — where it counts down the time remaining until C3 —, after) and a **"Rehearsal"** button that starts a simulated clock 30 s before C2 (or before maximum, for a partial eclipse) so that you can practise.
+- **`.ics` export** (calendar): one event for the entire eclipse (C1–C4) and, for totality, one for totality (C2–C3), with optional `VALARM` alarms (one day and 15 minutes before; 5 minutes before totality); times in UTC, lines folded at 75 octets, CRLF.
+- **Checklist for safe viewing** (ISO 12312-2 filters, the moment when looking with the naked eye is safe only during totality, photography, children, travel), with progress; the ticks are not saved between sessions.
+- **Computed band on the map:** a tick overlays on the Leaflet map the dotted lines (northern limit, southern limit, central line) computed in the application, in addition to those from the embedded NASA data, and shows the deviation between them: over the common stretch, a maximum of 3.6 km and on average 0.9 km (measured on 14.10.2026).
+- The language cycle is now RO → EN → HU → DE (the button in the header); `html[lang]` follows the chosen language. The application's old texts remain only in Romanian and English (in HU/DE English is shown); the new features have all four languages. The Hungarian (hu) and German (de) translations of the new features are **automatic and not verified by native speakers**; so would any other language added later (fr/it/es/pt are not offered in this application).
 
-1. Deschide pagina; trage/zoom pe hartă.
-2. Atinge un oraș pentru procent și oră, sau un romb auriu pentru durata totalității.
-3. Folosește butoanele de sus pentru zone predefinite sau „Caută un loc” pentru un oraș din listă ori pentru coordonate.
-4. Deschide „Legendă & date” (jos) pentru legendă, fapte, siguranță și surse.
+## User guide
 
-## Confidențialitate și rețea
+1. Open the page; drag/zoom on the map.
+2. Tap a city for percentage and time, or a golden diamond for the duration of totality.
+3. Use the buttons at the top for predefined areas or "Search a place" for a city from the list or for coordinates.
+4. Open "Legend & data" (bottom) for the legend, facts, safety and sources.
 
-- Nu folosește localStorage/sessionStorage/IndexedDB, cookie-uri sau conturi.
-- Nu contactează nicio gazdă externă (CSP: `connect-src 'none'`); Leaflet este inclus în fișier.
-- Permisiuni: niciuna la pornire; locația doar la cerere explicită (vezi mai jos).
+## Privacy and network
 
-- 1.1.0: **geolocația** (`navigator.geolocation`) se folosește doar dacă apeși „Folosește locația mea (GPS)” și confirmi în pagină; apoi browserul cere și el permisiunea. Exportul `.ics` și datele din kit se descarcă prin `Blob` local. Nu există cereri de rețea noi (CSP `connect-src 'none'` neschimbat). Kitul `fff-kit` (module `core`, `label`, `bundle`, `ephem`) adaugă butonul de transparență pe versiune; aplicația nu scrie nimic în `localStorage`/`sessionStorage` (verificat la pornire: 0 chei).
-## Limite și avertismente
+- It uses no localStorage/sessionStorage/IndexedDB, cookies or accounts.
+- It contacts no external host (CSP: `connect-src 'none'`); Leaflet is included in the file.
+- Permissions: none at startup; location only on explicit request (see below).
 
-- **Siguranță:** nu privi Soarele fără filtre certificate ISO 12312-2 (nu ochelari de soare, nu binoclu/lunetă fără filtru solar); ochiul liber doar în totalitate completă.
-- Valori informative și aproximative. Recalculate independent din elementele Besselian NASA (ΔT = 71,7 s): acoperirea parțială a celor 59 de orașe diferă în medie cu 0,05 puncte procentuale (max. 0,3); duratele de totalitate sunt pentru centrul orașului și variază cu zeci de secunde. Cifra „~89 mil. oameni” este neverificată.
-- Locuri la marginea benzii (ex. Sana'a, ~2–2,5 min) sunt sensibile la locul exact; verifică la surse oficiale.
-- Proiect personal, neoficial.
+- 1.1.0: **geolocation** (`navigator.geolocation`) is used only if you press "Use my location (GPS)" and confirm in the page; the browser then asks for permission as well. The `.ics` export and the kit's data are downloaded via a local `Blob`. There are no new network requests (CSP `connect-src 'none'` unchanged). The `fff-kit` kit (modules `core`, `label`, `bundle`, `ephem`) adds the per-version transparency button; the application writes nothing to `localStorage`/`sessionStorage` (checked at startup: 0 keys).
 
-- **Funcții noi, limite reale.** Contactele locale sunt calculate pentru nivelul mării (altitudinea introdusă se aplică, relieful și orizontul local nu); concordanța cu referința independentă (JPL DE421, separare topocentrică) este de ≈ 1 s la maxim și ≤ 3 s la contacte pe 10 locuri de test, dar ΔT (rotația Pământului) are o incertitudine de ≈ ±1 s în 2027, iar marginea Lunii nu e modelată (perlele lui Baily, valuri de umbră). Durata totalității la marginea benzii e foarte sensibilă la locul exact. Aplicația avertizează când un contact are loc sub orizont sau când locul e la mai puțin de 15 km de margine.
-- **Numărătoarea folosește ceasul dispozitivului**, nu o sursă de timp oficială: verifică ora telefonului. Aplicația nu este un instrument de siguranță; filtrele ISO 12312-2 și instrucțiunile autorităților rămân obligatorii. Nu se oferă sfat medical.
-- **Banda calculată** are fir de aproximare (pas de 5 minute pe traseu, comparație cu datele NASA încorporate); nu înlocuiește datele oficiale.
-## Teste
+## Limits and warnings
 
-`node tests/fff-r8.test.mjs` (Playwright din `/opt/node-tools`, Chromium local, rețeaua blocată; `tests/_lib.mjs` are ajutoarele comune). Valorile de referință sunt în `tests/ref-c3a.json`: circumstanțele locale pentru 10 locuri de referință (contacte C1–C4, durata, obscurare, altitudinea Soarelui; JPL DE421, din `fff-kit/test/ref`), momentele de răsărit/apus/trecere (Soare, Lună; 5 locuri × 4 date), 56 de momente de fază și 54 de poziții alt/az, calculate independent cu **pyephem 4.2.1** (folosit doar offline pentru a genera numerele; nu face parte din aplicație). Fiecare test are pragul scris în cod; testul de accesibilitate (axe-core, `bypassCSP`) rulează și în dialoguri/panouri deschise, la 1280×800 și 360×740.
+- **Safety:** do not look at the Sun without certified ISO 12312-2 filters (not sunglasses, not binoculars/telescope without a solar filter); naked eye only during full totality.
+- Informational and approximate values. Independently recomputed from the NASA Besselian elements (ΔT = 71.7 s): the partial coverage of the 59 cities differs on average by 0.05 percentage points (max. 0.3); the durations of totality are for the city centre and vary by tens of seconds. The figure "~89 million people" is unverified.
+- Places at the edge of the band (e.g. Sana'a, ~2–2.5 min) are sensitive to the exact location; check official sources.
+- Personal, unofficial project.
 
-## Rulare locală / offline
+- **New features, real limits.** The local contacts are computed for sea level (the altitude entered is applied, the relief and the local horizon are not); agreement with the independent reference (JPL DE421, topocentric separation) is ≈ 1 s at maximum and ≤ 3 s at contacts over 10 test locations, but ΔT (Earth's rotation) has an uncertainty of ≈ ±1 s in 2027, and the Moon's limb is not modelled (Baily's beads, shadow bands). The duration of totality at the edge of the band is very sensitive to the exact location. The application warns when a contact occurs below the horizon or when the place is less than 15 km from the edge.
+- **The countdown uses the device clock**, not an official time source: check your phone's time. The application is not a safety instrument; ISO 12312-2 filters and the authorities' instructions remain mandatory. No medical advice is given.
+- **The computed band** has an approximation margin (5-minute step along the track, comparison with the embedded NASA data); it does not replace official data.
 
-Descarcă `index.html` și deschide-l în browser; funcționează fără internet.
+## Tests
 
-## Istoric / Changelog
+`node tests/fff-r8.test.mjs` (Playwright from `/opt/node-tools`, local Chromium, network blocked; `tests/_lib.mjs` has the shared helpers). The reference values are in `tests/ref-c3a.json`: local circumstances for 10 reference locations (contacts C1–C4, duration, obscuration, Sun altitude; JPL DE421, from `fff-kit/test/ref`), the sunrise/sunset/transit times (Sun, Moon; 5 locations × 4 dates), 56 phase moments and 54 alt/az positions, computed independently with **pyephem 4.2.1** (used only offline to generate the numbers; it is not part of the application). Each test has its threshold written in the code; the accessibility test (axe-core, `bypassCSP`) also runs in open dialogs/panels, at 1280×800 and 360×740.
+
+## Running locally / offline
+
+Download `index.html` and open it in a browser; it works without internet.
+
+## History / Changelog
 
 ### 1.2.0 — 2026-10-19
-- Nou: legătură „↗ TerRa” după rezultatul local — deschide TerRa (hartă 2D) la maximul eclipsei (local, sau global dacă eclipsa nu se vede), cu locul ales ca „Locația mea”. Coordonatele (rotunjite la ~1 km) apar doar în adresa filei noi; nu se trimit nicăieri.
+- New: "↗ TerRa" link after the local result — opens TerRa (2D map) at the eclipse maximum (local, or global if the eclipse is not visible), with the chosen place as "My location". The coordinates (rounded to ~1 km) appear only in the address of the new tab; they are not sent anywhere.
 
 ### 1.1.0 — 2026-10-14
-- Nou: dialogul „La locul tău” (circumstanțe locale, numărătoare + repetiție, export `.ics`, listă de verificare, bandă calculată pe hartă, GPS cu consimțământ în două trepte); ciclu de limbi RO/EN/HU/DE pentru funcțiile noi; `FFF.ephem` și kitul `fff-kit` (`core`, `label`, `bundle`, `ephem`) integrate; `tests/fff-r8.test.mjs` (83 de verificări); captura de ecran actualizată (butonul nou). Datele NASA și restul aplicației nu au fost modificate (comparație înainte/după la 1280×800: singura diferență vizibilă e noul buton).
+- New: the "At your location" dialog (local circumstances, countdown + rehearsal, `.ics` export, checklist, computed band on the map, GPS with two-step consent); RO/EN/HU/DE language cycle for the new features; `FFF.ephem` and the `fff-kit` kit (`core`, `label`, `bundle`, `ephem`) integrated; `tests/fff-r8.test.mjs` (83 checks); screenshot updated (the new button). The NASA data and the rest of the application were not modified (before/after comparison at 1280×800: the only visible difference is the new button).
 
-- 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
-- Runda 7: interfață bilingvă RO/EN (titluri, legendă, avertisment de siguranță, surse, ferestrele de pe hartă și rezultatele căutării); marcaje scalate după zoom (hartă mai lizibilă pe 360 px); captură de ecran actualizată (butonul „EN”).
-- Adăugat „Caută un loc” (oraș din listă sau coordonate → în/în afara benzii și distanțe orientative); CSP: `script-src` pe hash SHA-256, fără `'unsafe-inline'`; captură de ecran actualizată (butonul nou).
-- Hartă, antet și legendă sunt acum repere semantice (`main`, `header`, `aside`); axe-core: 0 violări la 1280 și 360 px (și varianta statică are conținutul în `main`).
-- Evenimentul (2 august 2027) este încă viitor la această dată; datele NASA/GSFC nu au fost modificate.
+- 1.0.0 — 2026-10-12: the version and the last-updated date are shown in the app
+- Round 7: bilingual RO/EN interface (titles, legend, safety warning, sources, map windows and search results); markers scaled by zoom (more legible map at 360 px); screenshot updated (the "EN" button).
+- Added "Search a place" (city from the list or coordinates → inside/outside the band and indicative distances); CSP: `script-src` on a SHA-256 hash, without `'unsafe-inline'`; screenshot updated (the new button).
+- Map, header and legend are now semantic landmarks (`main`, `header`, `aside`); axe-core: 0 violations at 1280 and 360 px (and the static variant also has its content in `main`).
+- The event (2 August 2027) is still in the future at this date; the NASA/GSFC data were not modified.
 
-## Licență
+## License
 
-Licență: MIT — vezi fișierul `LICENSE`. Include Leaflet 1.9.4 (BSD-2-Clause, © Vladimir Agafonkin) și date Natural Earth (domeniu public).
+License: MIT — see the `LICENSE` file. Includes Leaflet 1.9.4 (BSD-2-Clause, © Vladimir Agafonkin) and Natural Earth data (public domain).
 
-## Autor
+## Author
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 

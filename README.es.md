@@ -10,7 +10,7 @@ Mapa interactivo, en un solo archivo HTML, de la banda de totalidad (sur de Espa
 
 **Aplicación en línea:** https://chiuta.github.io/Eclipsa-2027/
 
-![Captura de pantalla](screenshot.png)
+![Captura de pantalla](screenshot.es.png)
 
 ## Qué es
 

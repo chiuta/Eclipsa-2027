@@ -10,7 +10,7 @@ Mappa interattiva, in un unico file HTML, della fascia di totalità (Spagna meri
 
 **App online:** https://chiuta.github.io/Eclipsa-2027/
 
-![Schermata](screenshot.png)
+![Schermata](screenshot.it.png)
 
 ## Che cos'è
 

@@ -10,7 +10,7 @@ Hartă interactivă, într-un singur fișier HTML, a benzii de totalitate (Spani
 
 **Live:** https://chiuta.github.io/Eclipsa-2027/
 
-![Captura de ecran](screenshot.png)
+![Captura de ecran](screenshot.ro.png)
 
 ## Ce este
 

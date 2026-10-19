@@ -10,7 +10,7 @@ An interactive map, in a single HTML file, of the band of totality (southern Spa
 
 **Live app:** https://chiuta.github.io/Eclipsa-2027/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.en.png)
 
 ## What it is
 

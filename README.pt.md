@@ -10,7 +10,7 @@ Mapa interativo, num único ficheiro HTML, da faixa de totalidade (sul de Espanh
 
 **Aplicação online:** https://chiuta.github.io/Eclipsa-2027/
 
-![Captura de ecrã](screenshot.png)
+![Captura de ecrã](screenshot.pt.png)
 
 ## O que é
 

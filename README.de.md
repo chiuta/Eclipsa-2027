@@ -10,7 +10,7 @@ Interaktive Karte in einer einzigen HTML-Datei des Totalitätsstreifens (Südspa
 
 **Online-App:** https://chiuta.github.io/Eclipsa-2027/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.de.png)
 
 ## Was es ist
 

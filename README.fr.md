@@ -10,7 +10,7 @@ Carte interactive, dans un seul fichier HTML, de la bande de totalité (sud de l
 
 **Application en ligne :** https://chiuta.github.io/Eclipsa-2027/
 
-![Capture d'écran](screenshot.png)
+![Capture d'écran](screenshot.fr.png)
 
 ## Présentation
 

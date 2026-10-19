@@ -10,7 +10,7 @@ Interaktív térkép egyetlen HTML-fájlban a teljesség sávjáról (Dél-Spany
 
 **Online alkalmazás:** https://chiuta.github.io/Eclipsa-2027/
 
-![Képernyőkép](screenshot.png)
+![Képernyőkép](screenshot.hu.png)
 
 ## Mi ez
 

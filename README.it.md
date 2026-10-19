@@ -94,6 +94,5 @@ Licenza: MIT — vedi il file `LICENSE`. Include Leaflet 1.9.4 (BSD-2-Clause, ©
 
 Alexio — Alexandru-Ionuț Chiuță, contatto: alexio@trom.tf
 
-## Riepilogo in inglese
-
+## Riepilogo
 Mappa Leaflet offline, a file singolo, dell'eclissi totale di Sole del 2 agosto 2027: fascia di totalità, linea centrale, punto di durata massima, copertura parziale per 59 città. Dati della fascia dagli elementi besseliani NASA; valori delle città ricontrollati in modo indipendente (scarto medio di 0,05 punti percentuali). Avviso ben visibile sulla sicurezza degli occhi (ISO 12312-2). Nessuna memorizzazione, nessuna richiesta di rete.

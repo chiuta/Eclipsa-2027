@@ -94,6 +94,5 @@ Licence : MIT — voir le fichier `LICENSE`. Inclut Leaflet 1.9.4 (BSD-2-Clause,
 
 Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf
 
-## Résumé en anglais
-
+## Résumé
 Carte Leaflet hors ligne, en un seul fichier, de l'éclipse totale de Soleil du 2 août 2027 : bande de totalité, ligne centrale, point de durée maximale, couverture partielle pour 59 villes. Données de la bande issues des éléments besséliens de la NASA ; valeurs des villes revérifiées de façon indépendante (écart moyen de 0,05 point de pourcentage). Avertissement bien visible sur la sécurité oculaire (ISO 12312-2). Aucun stockage, aucune requête réseau.

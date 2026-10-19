@@ -94,6 +94,5 @@ Licenc: MIT — lásd a `LICENSE` fájlt. Tartalmazza a Leaflet 1.9.4-et (BSD-2-
 
 Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf
 
-## Angol nyelvű összefoglaló
-
+## Összefoglaló
 Offline, egyfájlos Leaflet térkép a 2027. augusztus 2-i teljes napfogyatkozásról: a teljesség sávja, középvonal, a legnagyobb időtartamú pont, részleges fedés 59 városra. A sáv adatai a NASA bessel-elemeiből származnak; a városok értékeit függetlenül újraellenőriztük (átlagos eltérés 0,05 százalékpont). Feltűnő szemvédelmi figyelmeztetés (ISO 12312-2). Nincs tárolás, nincsenek hálózati kérések.

@@ -94,6 +94,5 @@ Lizenz: MIT — siehe Datei `LICENSE`. Enthält Leaflet 1.9.4 (BSD-2-Clause, © 
 
 Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf
 
-## Englische Zusammenfassung
-
+## Zusammenfassung
 Offline-Leaflet-Karte in einer einzigen Datei der totalen Sonnenfinsternis vom 2. August 2027: Totalitätsstreifen, Mittellinie, Punkt größter Dauer, partielle Bedeckung für 59 Städte. Streifendaten aus den Besselschen Elementen der NASA; Städtewerte unabhängig nachgeprüft (mittlere Abweichung 0,05 Prozentpunkte). Deutlich sichtbare Warnung zum Augenschutz (ISO 12312-2). Kein Speicher, keine Netzwerkanfragen.

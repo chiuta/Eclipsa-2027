@@ -94,6 +94,5 @@ Licença: MIT — veja o ficheiro `LICENSE`. Inclui o Leaflet 1.9.4 (BSD-2-Claus
 
 Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf
 
-## Resumo em inglês
-
+## Resumo
 Mapa Leaflet offline, num único ficheiro, do eclipse total do Sol de 2 de agosto de 2027: faixa de totalidade, linha central, ponto de duração máxima, cobertura parcial para 59 cidades. Dados da faixa a partir dos elementos besselianos da NASA; valores das cidades reverificados de forma independente (desvio médio de 0,05 pontos percentuais). Aviso destacado sobre segurança ocular (ISO 12312-2). Sem armazenamento, sem pedidos de rede.

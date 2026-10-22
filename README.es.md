@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.3.3 · **Última actualización:** 2026-10-22
+**Versión:** 1.3.4 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ Todo se calcula en local, con el módulo `FFF.ephem` (efemérides propias, sin r
 Descarga `index.html` y ábrelo en un navegador; funciona sin internet.
 
 ## Historial / Changelog
+
+### 1.3.4 — 2026-10-22
+
+fff-kit 1.1.2: PBKDF2 con 600.000 iteraciones, protección anti-clickjacking.
 
 ### 1.3.3 — 2026-10-22
 - Accesibilidad: exactamente un solo H1 en la página (la vista estática sin JavaScript se retira del DOM cuando el mapa arranca); los marcadores de ciudades y de los bordes de la franja en el mapa tienen áreas táctiles mayores (24 px).

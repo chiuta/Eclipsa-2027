@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.3.3 · **Dernière mise à jour :** 2026-10-22
+**Version :** 1.3.4 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ Tout est calculé en local, avec le module `FFF.ephem` (éphémérides propres, 
 Téléchargez `index.html` et ouvrez-le dans un navigateur ; il fonctionne sans internet.
 
 ## Historique / Changelog
+
+### 1.3.4 — 2026-10-22
+
+fff-kit 1.1.2 : PBKDF2 600 000 itérations, protection anti-clickjacking.
 
 ### 1.3.3 — 2026-10-22
 - Accessibilité : exactement un seul H1 dans la page (la vue statique sans JavaScript est retirée du DOM une fois la carte démarrée) ; les repères des villes et des bords de la bande sur la carte ont des cibles tactiles plus grandes (24 px).

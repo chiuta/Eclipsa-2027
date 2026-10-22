@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.3.4 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 1.3.5 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ Alles wird lokal berechnet, mit dem Modul `FFF.ephem` (eigene Ephemeriden, ohne 
 Lade `index.html` herunter und öffne sie in einem Browser; sie funktioniert ohne Internet.
 
 ## Verlauf / Changelog
+
+### 1.3.5 — 2026-10-22
+
+fff-kit 1.1.4: Touch-Ziele und Mindestschriftgröße. Touch-Ziele/Text in der App korrigiert.
 
 ### 1.3.4 — 2026-10-22
 

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.3.2 · **Dernière mise à jour :** 2026-10-19
+**Version :** 1.3.3 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ Tout est calculé en local, avec le module `FFF.ephem` (éphémérides propres, 
 Téléchargez `index.html` et ouvrez-le dans un navigateur ; il fonctionne sans internet.
 
 ## Historique / Changelog
+
+### 1.3.3 — 2026-10-22
+- Accessibilité : exactement un seul H1 dans la page (la vue statique sans JavaScript est retirée du DOM une fois la carte démarrée) ; les repères des villes et des bords de la bande sur la carte ont des cibles tactiles plus grandes (24 px).
+- Mobile : le texte fait au moins 12 px et les boutons et champs ont des cibles tactiles plus grandes sur les écrans étroits.
 
 ### 1.2.0 — 2026-10-19
 - Nouveau : lien « ↗ TerRa » après le résultat local — ouvre TerRa (carte 2D) au maximum de l'éclipse (local, ou global si l'éclipse n'est pas visible), avec le lieu choisi comme « Ma position ». Les coordonnées (arrondies à ~1 km) n'apparaissent que dans l'adresse du nouvel onglet ; elles ne sont envoyées nulle part.

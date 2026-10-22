@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.3.2 · **Last updated:** 2026-10-19
+**Version:** 1.3.3 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ All are computed locally, with the `FFF.ephem` module (own ephemerides, no netwo
 Download `index.html` and open it in a browser; it works without internet.
 
 ## History / Changelog
+
+### 1.3.3 — 2026-10-22
+- Accessibility: exactly one H1 in the page (the static no-JavaScript view is removed from the DOM once the map is running); the city and edge markers on the map have larger touch targets (24 px).
+- Mobile: text is at least 12 px and buttons and fields have larger touch targets on narrow screens.
 
 ### 1.2.0 — 2026-10-19
 - New: "↗ TerRa" link after the local result — opens TerRa (2D map) at the eclipse maximum (local, or global if the eclipse is not visible), with the chosen place as "My location". The coordinates (rounded to ~1 km) appear only in the address of the new tab; they are not sent anywhere.

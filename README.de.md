@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.3.2 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 1.3.3 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ Alles wird lokal berechnet, mit dem Modul `FFF.ephem` (eigene Ephemeriden, ohne 
 Lade `index.html` herunter und öffne sie in einem Browser; sie funktioniert ohne Internet.
 
 ## Verlauf / Changelog
+
+### 1.3.3 — 2026-10-22
+- Barrierefreiheit: genau eine H1 auf der Seite (die statische Ansicht ohne JavaScript wird nach dem Start der Karte aus dem DOM entfernt); die Markierungen für Städte und Bandränder auf der Karte haben größere Touch-Flächen (24 px).
+- Mobil: Der Text ist mindestens 12 px groß, und Schaltflächen und Felder haben auf schmalen Bildschirmen größere Touch-Flächen.
 
 ### 1.2.0 — 2026-10-19
 - Neu: Link „↗ TerRa“ nach dem lokalen Ergebnis — öffnet TerRa (2D-Karte) zum Maximum der Finsternis (lokal, oder global, wenn die Finsternis nicht sichtbar ist), mit dem gewählten Ort als „Mein Standort“. Die Koordinaten (auf ~1 km gerundet) erscheinen nur in der Adresse des neuen Tabs; sie werden nirgendwohin gesendet.

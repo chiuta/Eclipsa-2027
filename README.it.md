@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.3.2 · **Ultimo aggiornamento:** 2026-10-19
+**Versione:** 1.3.3 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ Tutto viene calcolato in locale, con il modulo `FFF.ephem` (effemeridi proprie, 
 Scarica `index.html` e aprilo in un browser; funziona senza internet.
 
 ## Cronologia / Changelog
+
+### 1.3.3 — 2026-10-22
+- Accessibilità: esattamente un solo H1 nella pagina (la vista statica senza JavaScript viene rimossa dal DOM una volta avviata la mappa); i marcatori delle città e dei bordi della fascia sulla mappa hanno aree tattili più grandi (24 px).
+- Mobile: il testo è di almeno 12 px e pulsanti e campi hanno aree tattili più grandi sugli schermi stretti.
 
 ### 1.2.0 — 2026-10-19
 - Novità: link «↗ TerRa» dopo il risultato locale — apre TerRa (mappa 2D) al massimo dell'eclissi (locale, o globale se l'eclissi non è visibile), con il luogo scelto come «La mia posizione». Le coordinate (arrotondate a ~1 km) compaiono solo nell'indirizzo della nuova scheda; non vengono inviate da nessuna parte.

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.3.2 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 1.3.3 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ Mind helyben számolódik, az `FFF.ephem` modullal (saját efemeridák, hálóza
 Töltsd le az `index.html` fájlt, és nyisd meg böngészőben; internet nélkül is működik.
 
 ## Előzmények / Changelog
+
+### 1.3.3 — 2026-10-22
+- Akadálymentesség: pontosan egy H1 van az oldalon (a JavaScript nélküli statikus nézet a térkép elindulása után eltávolításra kerül a DOM-ból); a városok és a sáv szélének jelölői a térképen nagyobb érintési felülettel rendelkeznek (24 px).
+- Mobil: a szöveg legalább 12 px, a gombok és mezők érintési felülete pedig nagyobb keskeny képernyőn.
 
 ### 1.2.0 — 2026-10-19
 - Új: „↗ TerRa” hivatkozás a helyi eredmény után — megnyitja a TerRát (2D térkép) a fogyatkozás maximumánál (helyben, vagy globálisan, ha a fogyatkozás nem látszik), a választott hellyel „Saját helyzetem”-ként. A koordináták (kb. 1 km-re kerekítve) csak az új lap címében jelennek meg; nem kerülnek elküldésre sehova.

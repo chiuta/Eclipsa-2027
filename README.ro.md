@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.3.2 · **Ultima actualizare:** 2026-10-19
+**Versiune:** 1.3.3 · **Ultima actualizare:** 2026-10-22
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -71,6 +71,10 @@ Toate se calculează local, cu modulul `FFF.ephem` (efemeride proprii, fără re
 Descarcă `index.html` și deschide-l în browser; funcționează fără internet.
 
 ## Istoric / Changelog
+
+### 1.3.3 — 2026-10-22
+- Accesibilitate: exact un singur H1 în pagină (varianta statică fără JavaScript este scoasă din DOM după pornirea hărții); marcajele orașelor și ale marginii benzii de pe hartă au ținte tactile mai mari (24 px).
+- Mobil: textul are cel puțin 12 px, iar butoanele și câmpurile au ținte tactile mai mari pe ecrane înguste.
 
 ### 1.2.0 — 2026-10-19
 - Nou: legătură „↗ TerRa” după rezultatul local — deschide TerRa (hartă 2D) la maximul eclipsei (local, sau global dacă eclipsa nu se vede), cu locul ales ca „Locația mea”. Coordonatele (rotunjite la ~1 km) apar doar în adresa filei noi; nu se trimit nicăieri.

@@ -3,7 +3,7 @@
 import {launch, check, summary} from "./_lib.mjs";
 import path from "path";
 const SLUG = path.basename(path.resolve(path.dirname(new URL(import.meta.url).pathname), ".."));
-const IS27 = SLUG === "Eclipsa-2027", FROM = IS27 ? "eclipsa-2027" : "eclipsa";
+const IS27 = SLUG.toLowerCase() === "eclipsa-2027", FROM = IS27 ? "eclipsa-2027" : "eclipsa";
 const openDlg = async page => { if (IS27) { await page.click("#localBtn"); await page.waitForSelector("#e27Dialog[open]"); } else { if (!(await page.evaluate(() => document.getElementById("e27Panel").open))) await page.click("#e27Sum"); await page.waitForSelector("#e27-loc", {state: "visible"}); } };
 const search = async (page, q) => { await page.fill("#e27-loc", q); await page.press("#e27-loc", "Enter"); await page.waitForTimeout(300); };
 const href = page => page.$$eval("#e27-terra a", a => a.map(x => ({h: x.getAttribute("href"), t: x.title, x: x.textContent, r: x.rel, g: x.target})));

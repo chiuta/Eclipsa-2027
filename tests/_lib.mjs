@@ -1,21 +1,24 @@
 // Ajutoare comune pentru testele Playwright (rețea blocată, CSP real, axe opțional).
+// [fff-portable] axe-core: FFF_AXE / AXE_PATH, apoi pachetul `axe-core` (npm i -D axe-core). Dacă lipsește: undefined (testele cu axe pică cu mesaj clar).
+import {createRequire as __fffCR} from 'node:module';
+const __fffAxe = () => { try { return __fffCR(import.meta.url).resolve('axe-core/axe.min.js'); } catch { return undefined; } };
 import {createRequire} from "module";
 import fs from "fs";
 import path from "path";
 import {fileURLToPath} from "url";
-const require = createRequire("/opt/node-tools/package.json");
+const require = createRequire(process.env.PW_ROOT || import.meta.url);
 export const {chromium} = require("playwright");
 export const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const INDEX = path.resolve(HERE, "..", "index.html");
 export const REF = JSON.parse(fs.readFileSync(path.join(HERE, "ref-c3a.json"), "utf8"));
-const AXE_PATH = process.env.AXE_PATH || "/tmp/claude-0/-home-claude/78529928-3825-51c3-b9bd-0e81655ab6bc/scratchpad/sweep/node_modules/axe-core/axe.min.js";
-export const AXE = fs.existsSync(AXE_PATH) ? fs.readFileSync(AXE_PATH, "utf8") : null;
+const AXE_PATH = process.env.AXE_PATH || __fffAxe();
+export const AXE = (AXE_PATH && fs.existsSync(AXE_PATH)) ? fs.readFileSync(AXE_PATH, "utf8") : null;
 let fails = 0, passes = 0;
 export function check(name, cond, extra) { if (cond) { passes++; console.log("  ok  " + name); } else { fails++; console.log("FAIL  " + name + (extra !== undefined ? "  -> " + JSON.stringify(extra) : "")); } }
 export function summary() { console.log(`\n${passes} reușite, ${fails} eșuate`); process.exit(fails ? 1 : 0); }
 /** Pornește pagina cu rețeaua blocată. opts: w,h,bypassCSP,perm,geo,clock (ISO), colorScheme, locale, geoSpy */
 export async function launch({w = 1280, h = 800, bypassCSP = false, perm = [], geo, clock, colorScheme, locale = "ro-RO", geoSpy = false, timezoneId} = {}) {
-  const browser = await chromium.launch({executablePath: "/opt/pw-browsers/chromium"});
+  const browser = await chromium.launch({executablePath: process.env.CHROMIUM_PATH || undefined});
   const ctx = await browser.newContext({viewport: {width: w, height: h}, bypassCSP, permissions: perm, geolocation: geo, colorScheme, locale, timezoneId, acceptDownloads: true});
   await ctx.route(/^https?:/, r => r.abort());
   const page = await ctx.newPage();

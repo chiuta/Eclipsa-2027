@@ -1,5 +1,9 @@
 // Eclipsa-2027 — teste pentru funcțiile noi (runda 8): circumstanțe locale, numărătoare, ICS, listă de verificare, bandă calculată, GPS cu consimțământ.
 // Rulare: node tests/fff-r8.test.mjs   (Playwright din /opt/node-tools, rețea blocată, Chromium local)
+// [fff-portable] versiunea/data/kitul aplicației se citesc din app.json (nu mai sunt hard-codate în teste)
+import {readFileSync as __fffRF} from 'node:fs';
+const __FFF_APP = JSON.parse(__fffRF(new URL('../app.json', import.meta.url), 'utf8'));
+const __fffRe = (s) => String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 import {launch, axeRun, hOverflow, check, summary, REF, setLang} from "./_lib.mjs";
 
 const hms = ms => new Date(ms).toISOString().slice(11, 19);
@@ -14,9 +18,9 @@ console.log("1. pornire, versiune, 0 erori");
   check("0 pageerror/console error", st.errs.length === 0, st.errs);
   check("0 cereri de rețea", st.net.length === 0, st.net);
   check("0 violări CSP", (await page.evaluate(() => window.__csp)).length === 0);
-  check("#app-version arată 1.3.8 · 2026-10-26", /1\.3\.8 · 2026-10-26/.test((await page.textContent("#app-version")).replace(/\s+/g, " ")));
-  check("meta application-version 1.3.8", (await page.getAttribute('meta[name="application-version"]', "content")) === "1.3.8");
-  check("meta last-updated 2026-10-26", (await page.getAttribute('meta[name="last-updated"]', "content")) === "2026-10-26");
+  check(`#app-version arată ${__FFF_APP.version} · ${__FFF_APP.updated}`, new RegExp(String.raw`${__fffRe(__FFF_APP.version)} · ${__fffRe(__FFF_APP.updated)}`).test((await page.textContent("#app-version")).replace(/\s+/g, " ")));
+  check(`meta application-version ${__FFF_APP.version}`, (await page.getAttribute('meta[name="application-version"]', "content")) === __FFF_APP.version);
+  check(`meta last-updated ${__FFF_APP.updated}`, (await page.getAttribute('meta[name="last-updated"]', "content")) === __FFF_APP.updated);
   check("butonul „La locul tău” apare (FFF.ephem încărcat)", await page.isVisible("#localBtn"));
   check("fără depășire orizontală 1280", (await hOverflow(page)) <= 0);
   await browser.close();

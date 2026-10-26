@@ -2,13 +2,15 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.3.8 · **Last updated:** 2026-10-26
+**Version:** 2.0.0 · **Last updated:** 2026-10-26
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 An interactive map, in a single HTML file, of the band of totality (southern Spain, North Africa, the Arabian Peninsula), with durations and partial coverage for cities.
 
 **Live app:** https://chiuta.github.io/Eclipsa-2027/
+
+**New in 2.0.0:** *The sky at your place* — a slider between C1 and C4 shows the Moon covering the Sun (coverage, magnitude, Sun altitude and azimuth) with one-tap jumps to each contact, plus an approximate *photography guide*: Sun image size on the sensor for your focal length and equivalent exposures (ISO, aperture, ±3 EV bracketing) computed from a test shot you take on the filtered Sun. Calculations, not guaranteed values; no reference exposure is invented and the safety rules are unchanged.
 
 ![Screenshot](screenshot.en.png)
 

@@ -2,13 +2,15 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.3.8 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Hartă interactivă, într-un singur fișier HTML, a benzii de totalitate (Spania de sud, Africa de Nord, Peninsula Arabică), cu durate și acoperirea parțială pe orașe.
 
 **Live:** https://chiuta.github.io/Eclipsa-2027/
+
+**Nou în 2.0.0:** *Cerul din locul tău* — un cursor între C1 și C4 arată Luna acoperind Soarele (acoperire, magnitudine, altitudinea și azimutul Soarelui), cu salt direct la fiecare contact; plus un *ghid de fotografiere orientativ*: dimensiunea imaginii Soarelui pe senzor pentru distanța focală aleasă și expuneri echivalente (ISO, diafragmă, bracketing ±3 EV) calculate dintr-o probă făcută de tine pe Soarele filtrat. Sunt calcule, nu valori garantate: nu se inventează nicio expunere de referință, iar regulile de siguranță rămân neschimbate.
 
 ![Captura de ecran](screenshot.ro.png)
 

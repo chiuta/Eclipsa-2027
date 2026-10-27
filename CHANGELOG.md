@@ -1,5 +1,19 @@
 # Jurnal de modificări — Eclipsa-2027
 
+## 2.2.0 — 2026-10-27
+
+Anterior: v2.1.0. Recenzie 2 (2026-10-27).
+
+- Nou: butonul **„Umbra pe hartă”** (în rândul de butoane): un film de 30 s (≈ 3 h 23 min reale) cu umbra totală a Lunii care traversează harta Leaflet. Poziția centrului și conturul (72 de puncte) sunt calculate în aplicație din elementele Besselian ale kitului, pe elipsoidul WGS84 (fără relief); apare doar umbra totală, nu penumbra. Pornește doar la clic, are pauză/redare, cursor (tastatură) pentru oră UTC și buton de închidere. Nota de limite este în pagină (aproximare, nu e instrument de siguranță).
+- Texte noi în română și engleză; celelalte limbi afișează engleza (traducere nativă neverificată).
+- Test nou `tests/umbra-pe-harta.test.mjs` (verificări independente): centrul coincide cu linia centrală a kitului (≤ 1 km) la toate probele de 15 min; lățimea conturului = lățimea benzii (129 km semilățime, ±4 km); centrul la maxim = maximul global; avans 2 s/30 s, pauză, cursor, 360 px, RO, axe, 0 rețea.
+- Hash-urile CSP recalculate; versiunea aliniată (`app.json`, `fff-info`, `sw.js`, subsol).
+
+Nu s-a implementat:
+- Alarma cu pagina închisă / ecran oprit: ar cere notificări sau fundal (permisiuni noi); rămân alarmele din exportul `.ics`.
+- Penumbra pe hartă: nu e desenată (nu e nevoie pentru banda totalității; ar fi o formă foarte mare și imprecisă la margini).
+- README FR/IT/ES/PT/DE/HU: doar versiunea aliniată.
+
 ## 2.1.0 — 2026-10-27
 
 Anterior: v2.0.0. Recenzie 2026-10-27.

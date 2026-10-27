@@ -2,13 +2,17 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.1.0 (anterior: v2.0.0) · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet (harta, calculele, animația și alarma nu cer rețea; legătura către Bolta cere internet doar la clic)
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Hartă interactivă, într-un singur fișier HTML, a benzii de totalitate (Spania de sud, Africa de Nord, Peninsula Arabică), cu durate și acoperirea parțială pe orașe.
 
 **Live:** https://chiuta.github.io/Eclipsa-2027/
+
+**Nou în 2.1.0:** (1) buton de **animație** în *Cerul din locul tău*: Luna traversează Soarele de la C1 la C4 în 30 s (pornește doar la cererea ta; pauză, sau mută cursorul / sari la un contact ca să o oprești); (2) **alarmă sonoră și cu vibrație la contactele C1–C4** (opțională, plus avertisment cu 10 s înainte de sfârșitul totalității), calculată din ceasul dispozitivului și care funcționează **doar cât timp pagina e deschisă, în prim-plan și cu ecranul pornit** (nu folosește notificări, nu cere permisiuni; nu înlocuiește alarmele din calendar `.ics` și nu e un instrument de siguranță; are buton de test și merge cu *Repetiția*); (3) **legătură reciprocă cu Bolta**, planetariul offline (aplicații separate, nu unificate: Eclipsa-2027 arată banda și circumstanțele acestei eclipse, Bolta arată cerul în orice loc și moment; legătura se deschide doar la clic și cere internet). Textele noilor funcții există în română și engleză; celelalte limbi afișează engleza (neverificat nativ).
 
 **Nou în 2.0.0:** *Cerul din locul tău* — un cursor între C1 și C4 arată Luna acoperind Soarele (acoperire, magnitudine, altitudinea și azimutul Soarelui), cu salt direct la fiecare contact; plus un *ghid de fotografiere orientativ*: dimensiunea imaginii Soarelui pe senzor pentru distanța focală aleasă și expuneri echivalente (ISO, diafragmă, bracketing ±3 EV) calculate dintr-o probă făcută de tine pe Soarele filtrat. Sunt calcule, nu valori garantate: nu se inventează nicio expunere de referință, iar regulile de siguranță rămân neschimbate.
 

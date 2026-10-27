@@ -2,13 +2,17 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.0 · **Last updated:** 2026-10-26
+**Version:** 2.1.0 (previous: v2.0.0) · **Last updated:** 2026-10-27
+
+**Status:** stable · **Offline:** complete (the map, calculations, animation and alarm need no network; the link to Bolta needs internet only when you click it)
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 An interactive map, in a single HTML file, of the band of totality (southern Spain, North Africa, the Arabian Peninsula), with durations and partial coverage for cities.
 
 **Live app:** https://chiuta.github.io/Eclipsa-2027/
+
+**New in 2.1.0:** (1) an **animation** button in *The sky at your place*, which plays the Moon crossing the Sun from C1 to C4 in 30 s (started only by you; pause, or drag the slider / jump to a contact to stop it); (2) an optional **sound and vibration alarm at contacts C1–C4** (plus a warning 10 s before the end of totality), computed from the device clock and working **only while the page is open, in the foreground and with the screen on** (it uses no notifications and asks for no permission; it does not replace the `.ics` calendar alarms and is not a safety instrument; includes a test button and works with the *Rehearsal*); (3) a **reciprocal link with Bolta**, the offline planetarium (separate apps, deliberately not merged: Eclipsa-2027 maps the band and the circumstances of this eclipse, Bolta shows the sky at any place and moment; the link opens only on click and needs internet). The texts of the new features exist in Romanian and English; the other languages show English (not natively verified).
 
 **New in 2.0.0:** *The sky at your place* — a slider between C1 and C4 shows the Moon covering the Sun (coverage, magnitude, Sun altitude and azimuth) with one-tap jumps to each contact, plus an approximate *photography guide*: Sun image size on the sensor for your focal length and equivalent exposures (ISO, aperture, ±3 EV bracketing) computed from a test shot you take on the filtered Sun. Calculations, not guaranteed values; no reference exposure is invented and the safety rules are unchanged.
 

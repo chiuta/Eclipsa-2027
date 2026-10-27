@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.1.0 (anterior: v2.0.0) · **Ultima actualizare:** 2026-10-27
+**Versiune:** 2.2.0 (anterior: v2.1.0) · **Ultima actualizare:** 2026-10-27
 
 **Stare:** stabil · **Offline:** complet (harta, calculele, animația și alarma nu cer rețea; legătura către Bolta cere internet doar la clic)
 
@@ -11,6 +11,8 @@ Limbile interfeței: **Română, English, Français, Italiano, Español, Portugu
 Hartă interactivă, într-un singur fișier HTML, a benzii de totalitate (Spania de sud, Africa de Nord, Peninsula Arabică), cu durate și acoperirea parțială pe orașe.
 
 **Live:** https://chiuta.github.io/Eclipsa-2027/
+
+**Nou în 2.2.0:** butonul **„Umbra pe hartă”** rulează un film de 30 s (≈ 3 h 23 min reale) cu umbra totală a Lunii care traversează harta Leaflet: centrul și un contur de 72 de puncte, calculate în aplicație din elementele Besselian pe elipsoidul WGS84 (fără relief; fără penumbră). Pornește doar la clic, cu pauză/redare, cursor (tastatură) pentru ora UTC și buton de închidere; limitele sunt scrise în pagină. Testat față de linia centrală a kitului (≤ 1 km) și lățimea benzii.
 
 **Nou în 2.1.0:** (1) buton de **animație** în *Cerul din locul tău*: Luna traversează Soarele de la C1 la C4 în 30 s (pornește doar la cererea ta; pauză, sau mută cursorul / sari la un contact ca să o oprești); (2) **alarmă sonoră și cu vibrație la contactele C1–C4** (opțională, plus avertisment cu 10 s înainte de sfârșitul totalității), calculată din ceasul dispozitivului și care funcționează **doar cât timp pagina e deschisă, în prim-plan și cu ecranul pornit** (nu folosește notificări, nu cere permisiuni; nu înlocuiește alarmele din calendar `.ics` și nu e un instrument de siguranță; are buton de test și merge cu *Repetiția*); (3) **legătură reciprocă cu Bolta**, planetariul offline (aplicații separate, nu unificate: Eclipsa-2027 arată banda și circumstanțele acestei eclipse, Bolta arată cerul în orice loc și moment; legătura se deschide doar la clic și cere internet). Textele noilor funcții există în română și engleză; celelalte limbi afișează engleza (neverificat nativ).
 

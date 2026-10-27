@@ -8,16 +8,14 @@
   "egress": [],
   "permissions": [
     "geolocation",
-    "audio (WebAudio, only after a click, for the contact alarm)",
-    "vibration (optional, same alarm)",
     "serviceWorker",
     "localStorage"
   ],
   "storageKeys": [
     "eclipsa2027.lang"
   ],
-  "sizeBytes": 1120652,
-  "sha256": "e25452d9d3f1f66e0b386d9a88f34ed698d84b2bc6f2befbb7f7f6dce0be985b",
+  "sizeBytes": 1127398,
+  "sha256": "6da71a3fa201214c5c2c0cb2613c0a3fa621089cefa2d1d9f03a71535fb0f19c",
   "csp": {
     "present": true,
     "directives": {

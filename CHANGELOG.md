@@ -1,5 +1,9 @@
 # Jurnal de modificări — Eclipsa-2027
 
+## 2.2.1 — 2026-10-31
+
+Doar interfață (accesibilitate pe telefon, 360×740): linia de versiune și linkul din ea 11 → 12 px. Fără alte schimbări de comportament.
+
 ## 2.2.0 — 2026-10-27
 
 Anterior: v2.1.0. Recenzie 2 (2026-10-27).

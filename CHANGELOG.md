@@ -1,5 +1,9 @@
 # Jurnal de modificări — Eclipsa-2027
 
+## 2.3.0 — 2026-11-01
+
+Nou: «Trimite la…» (fff-kit, modulul FFF.bridge) — după orice export de fișier (GPX, ICS, CSV, Markdown) apare butonul «Trimite la…» către aplicațiile compatibile, iar importul de fișiere al aplicației primește plicuri .fff.json trimise de ele, cu confirmare înainte de import. Fără rețea, fără telemetrie.
+
 ## 2.2.1 — 2026-10-31
 
 Doar interfață (accesibilitate pe telefon, 360×740): linia de versiune și linkul din ea 11 → 12 px. Fără alte schimbări de comportament.

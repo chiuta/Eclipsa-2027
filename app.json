@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "eclipsa-2027",
   "name": "Eclipsa Totală de Soare · 2 august 2027",
-  "version": "2.2.1",
-  "updated": "2026-10-31",
+  "version": "2.3.0",
+  "updated": "2026-11-02",
   "description": "Hartă offline a eclipsei totale de Soare din 2 august 2027: banda de totalitate (Spania, Africa de Nord, Peninsula Arabică), durate și acoperirea parțială pe orașe. Valori informative, calculate din elementele Besselian NASA.",
   "egress": [],
   "permissions": [
@@ -14,13 +14,13 @@
   "storageKeys": [
     "eclipsa2027.lang"
   ],
-  "sizeBytes": 1135622,
-  "sha256": "70b1117266884a2807079b87f028012ca156982dfcf1a6a4bfd85cd7aeace281",
+  "sizeBytes": 1154629,
+  "sha256": "844501cf77db56e0cc687c0777d0da5f88a8cbe6bd68c328bdf6f8d6006654f5",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
-      "script-src": "sha256×5",
+      "script-src": "sha256×6",
       "style-src": "'unsafe-inline'",
       "img-src": "'self' data:",
       "connect-src": "'none'",
@@ -56,6 +56,7 @@
       "dialog",
       "label",
       "bundle",
+      "bridge",
       "ephem"
     ]
   },
@@ -67,6 +68,7 @@
       "dialog",
       "label",
       "bundle",
+      "bridge",
       "ephem"
     ]
   },

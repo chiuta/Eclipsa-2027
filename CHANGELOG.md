@@ -1,5 +1,9 @@
 # Jurnal de modificări — Eclipsa-2027
 
+## 2.3.2 — 2026-11-03
+
+Etapa 7 (axe 4.10.3 din CI-ul hubului): blocul «Buy Me a Coffee» din legendă nu mai e un al doilea reper „complementary” imbricat; are rol „region”.
+
 ## 2.3.1 — 2026-11-03
 
 - Nou (Etapa 6, suita cer–timp): **locația, ora și fusul orar comune** cu Eclipsa-2027, Bolta, Horizons, Universul Observabil 3D, ORARIUM, CLEPSIDRA și Orar (modul `fff-place`): butonul „📍 Locație” (formular, 38 de orașe, geolocalizare doar la cerere și cu acord explicit, plic `place/fff` prin fișier/clipboard/QR/link), panoul **„Astea se întâmplă deasupra ta mâine”** (Soare, Lună, planete, eclipse; calcul local, fără rețea) și **alertă la eclipsă**. Pe aceeași origine locația se propagă singură; între adrese diferite, printr-un link/plic (o apăsare). Vezi docs/SUITA-CER-TIMP.md în hub. Calculatorul local de eclipsă primește locația comună (și o trimite înapoi).

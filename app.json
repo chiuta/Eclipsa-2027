@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "eclipsa-2027",
   "name": "' + xml(tr('pt', { i: i + 1, t: e.title, lat: e.lat, lon: e.lon })) + '",
-  "version": "2.3.2",
-  "updated": "2026-11-03",
+  "version": "2.3.3",
+  "updated": "2026-11-07",
   "description": "Hartă offline a eclipsei totale de Soare din 2 august 2027: banda de totalitate (Spania, Africa de Nord, Peninsula Arabică), durate și acoperirea parțială pe orașe. Valori informative, calculate din elementele Besselian NASA.",
   "egress": [],
   "permissions": [
@@ -17,8 +17,8 @@
   "storageKeys": [
     "eclipsa2027.lang"
   ],
-  "sizeBytes": 1459689,
-  "sha256": "71929778ddc7f818d60e3aaf4fdeeb976e366d289a1873d399c130db063745ff",
+  "sizeBytes": 1461295,
+  "sha256": "2727334dcd2081023fc6284187b809c432c14b12582e6721f25fe7a31f1f1eae",
   "csp": {
     "present": true,
     "directives": {
@@ -68,7 +68,7 @@
     ]
   },
   "kit": {
-    "version": "1.2.0",
+    "version": "1.2.1",
     "modules": [
       "core",
       "store",

@@ -1,5 +1,9 @@
 # Jurnal de modificări — Eclipsa-2027
 
+## 2.3.5 — 2026-11-08
+
+Caseta de siguranță de pe ecranul principal (și în varianta statică) spune acum sursa calculelor (elemente Besselian NASA/GSFC, calcul local) și marja de precizie (≤ ~3 s față de JPL DE421, în teste), în toate cele 8 limbi.
+
 ## 2.3.2 — 2026-11-03
 
 Etapa 7 (axe 4.10.3 din CI-ul hubului): blocul «Buy Me a Coffee» din legendă nu mai e un al doilea reper „complementary” imbricat; are rol „region”.

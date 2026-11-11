@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.3.7 (anterior: v2.1.0) · **Ultima actualizare:** 2026-11-10
+**Versiune:** 2.3.8 (anterior: v2.1.0) · **Ultima actualizare:** 2026-11-10
 
 **Stare:** stabil · **Offline:** complet (harta, calculele, animația și alarma nu cer rețea; legătura către Bolta cere internet doar la clic)
 

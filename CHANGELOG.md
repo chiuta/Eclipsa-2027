@@ -1,5 +1,9 @@
 # Jurnal de modificări — Eclipsa-2027
 
+## 2.3.10 — 2026-11-15
+
+- Nou: texturi fractale hiper-detaliate (fff-texturi 1.1.2) — fundalul și suprafețele mari (carduri, panouri, antete, butoane; filele și dialogurile ascunse la încărcare, când se deschid) primesc un material generat local (WebGL2, fără rețea și fără imagini), care se repetă fără cusătură; culorile aplicației rămân ale ei. Se oprește din dialogul „Transparență” sau cu `?notex=1`.
+
 ## 2.3.5 — 2026-11-08
 
 Caseta de siguranță de pe ecranul principal (și în varianta statică) spune acum sursa calculelor (elemente Besselian NASA/GSFC, calcul local) și marja de precizie (≤ ~3 s față de JPL DE421, în teste), în toate cele 8 limbi.
